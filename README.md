@@ -1,24 +1,16 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a working directory that contains a simple app to track completion percentage of various amusement parks in Orlando. My wife and I would like to 100% each of the parks and want a simple web app to keep track of our progress.
 
-Things you may want to cover:
+## Things that need to be implemented. 
 
-* Ruby version
+* Ruby Backend
+* User Authentication
+* React front end
+* Rails api
 
-* System dependencies
+## Feature wishlist
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Progress bar
+* Date night generator (uncompleted ride, restaurant, and show)
+* Fog of war map to demonstrate progression

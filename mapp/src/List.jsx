@@ -9,12 +9,12 @@ import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import axios from 'axios';
+// import axios from 'axios';
 
 const API_URL = "http://localhost:3000/api/v1/attractions";
 
 function getAPIData() {
-  return axios.get(API_URL).then((response) => response.data);
+  // return axios.get(API_URL).then((response) => response.data);
 }
 
 function List() {

@@ -1,7 +1,7 @@
-import List from './List';
-import Navbar from './Navbar';
-import Home from './Home';
-import Map from './Map';
+import List from './List.jsx';
+import Navbar from './Navbar.jsx';
+import Home from './Home.jsx';
+import Map from './Map.jsx';
 
 function App() {
   return (

@@ -9,32 +9,34 @@ import Paper from '@mui/material/Paper';
 import Checkbox from '@mui/material/Checkbox';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-// import axios from 'axios';
-
-const API_URL = "http://localhost:3000/api/v1/attractions";
-
-function getAPIData() {
-  // return axios.get(API_URL).then((response) => response.data);
-}
+import { API_URL } from '../constants';
 
 function List() {
   const [toggle, setToggle] = useState(false);
   const [attractions, setAttractions] = useState([]);
 
+  useEffect(() => {
+    async function getAttractions() {
+      try {
+        const response = await fetch(API_URL);
+        if (response.ok) {
+          const json = await response.json();
+          setAttractions(json);
+        } else {
+          throw response;
+        }
+      } catch (error) {
+        console.error(error);
+      } finally {
+        console.log(API_URL);
+      }
+    }
+    getAttractions();
+  }, []);
+
   const handleToggle = () => {
     setToggle(!toggle);
   }
-
-  useEffect(() => {
-    let mounted = true;
-    getAPIData().then((items) => {
-      if (mounted) {
-        setAttractions(items);
-      }
-    });
-    return () => (mounted = false);
-  }, []);
-
   
   return (
     <TableContainer component={Paper}>

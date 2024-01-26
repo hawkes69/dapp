@@ -1,27 +1,27 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { API_URL } from '~/constants';
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { API_URL } from "~/constants";
 
 const dappApi = createApi({
-  reducerPath: 'dappApi',
+  reducerPath: "dappApi",
   baseQuery: fetchBaseQuery({
     // baseUrl: API_URL,
-    baseUrl: 'http://localhost:3000/api/v1',
+    baseUrl: "http://localhost:3000/api/v1",
   }),
   endpoints(builder) {
     return {
       addAttraction: builder.mutation({
         query: () => {
           return {
-            url: '/attractions',
-            method: 'POST',
+            url: "/attractions",
+            method: "POST",
           };
         },
       }),
       fetchAttractions: builder.query({
         query: () => {
           return {
-            url: '/attractions',
-            method: 'GET',
+            url: "/attractions",
+            method: "GET",
           };
         },
       }),
@@ -29,7 +29,7 @@ const dappApi = createApi({
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
-            method: 'PUT',
+            method: "PUT",
             body: attraction,
           };
         },
@@ -38,12 +38,12 @@ const dappApi = createApi({
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
-            method: 'DELETE',
+            method: "DELETE",
           };
         },
       }),
-    }
-  }
+    };
+  },
 });
 
 export const {

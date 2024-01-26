@@ -1,4 +1,4 @@
-import IMAGES from "../images/Images"; 
+import IMAGES from "../images/Images";
 
 function Map() {
   return (

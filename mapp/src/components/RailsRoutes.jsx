@@ -1,8 +1,8 @@
-import { Route, Routes} from 'react-router-dom';
-import List from './Attractions/List.jsx';
-import AttractionDetails from './Attractions/AttractionDetails.jsx';
-import Home from './Home.jsx';
-import Map from './Map.jsx';
+import { Route, Routes } from "react-router-dom";
+import List from "./Attractions/List.jsx";
+import AttractionDetails from "./Attractions/AttractionDetails.jsx";
+import Home from "./Home.jsx";
+import Map from "./Map.jsx";
 
 function RailsRoutes() {
   return (

@@ -7,6 +7,10 @@ const IMAGES = {
   hollywoodStudiosGrayscale: new URL("./hollywood-studios-grayscale.png", import.meta.url).href,
   magicKingdomColor: new URL("./magic-kingdom-color.png", import.meta.url).href,
   magicKingdomGrayscale: new URL("./magic-kingdom-grayscale.png", import.meta.url).href,
+  islandsOfAdventureColor: new URL("./islands-of-adventure-color.png", import.meta.url).href,
+  islandsOfAdventureGrayscale: new URL("./islands-of-adventure-grayscale.png", import.meta.url).href,
+  universalStudiosColor: new URL("./universal-studios-color.png", import.meta.url).href,
+  universalStudiosGrayscale: new URL("./universal-studios-grayscale.png", import.meta.url).href,
   oops: new URL("./oops.gif", import.meta.url).href,
   phatso: new URL("./phatso.jpg", import.meta.url).href,
 };

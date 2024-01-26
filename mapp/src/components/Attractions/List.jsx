@@ -10,7 +10,6 @@ import Checkbox from "@mui/material/Checkbox";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
-import { Tab } from "@mui/material";
 
 function List() {
   const [toggle, setToggle] = useState(false);

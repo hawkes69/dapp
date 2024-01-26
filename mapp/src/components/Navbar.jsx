@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="flex flex-row gap-4 p-4 font-bold bg-slate-900 text-sky-400">
-      <h1>
+      <Link to="/">
         <CastleIcon />
-      </h1>
-      <h1>Attractions</h1>
-      <h1>Map</h1>
+      </Link>
+      <Link to="/attractions">Attractions</Link>
+      <Link to="/map">Map</Link>
     </div>
   );
 }

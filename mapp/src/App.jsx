@@ -3,16 +3,16 @@ import List from "./components/Attractions/List.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import Map from "./components/Map.jsx";
-import RailsRoutes from "./components/RailsRoutes.jsx";
+import AppRoutes from "./components/AppRoutes.jsx";
 
 function App() {
   return (
     <Router>
       <div>
         <Navbar />
-        <RailsRoutes />
+        <AppRoutes />
         {/* <Home /> */}
-        <List />
+        {/* <List /> */}
         {/* <Map /> */}
       </div>
     </Router>

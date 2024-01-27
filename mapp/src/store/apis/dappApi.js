@@ -4,8 +4,7 @@ import { API_URL } from "~/constants";
 const dappApi = createApi({
   reducerPath: "dappApi",
   baseQuery: fetchBaseQuery({
-    // baseUrl: API_URL,
-    baseUrl: "http://localhost:3000/api/v1",
+    baseUrl: API_URL,
   }),
   endpoints(builder) {
     return {
@@ -21,6 +20,14 @@ const dappApi = createApi({
         query: () => {
           return {
             url: "/attractions",
+            method: "GET",
+          };
+        },
+      }),
+      fetchAttraction: builder.query({
+        query: (id) => {
+          return {
+            url: `/attractions/${id}`,
             method: "GET",
           };
         },
@@ -49,8 +56,9 @@ const dappApi = createApi({
 export const {
   useAddAttractionMutation,
   useFetchAttractionsQuery,
-  useUpdateAttractionMutation,
   useRemoveAttractionMutation,
+  useFetchAttractionQuery,
+  useUpdateAttractionMutation,
 } = dappApi;
 
 export { dappApi };

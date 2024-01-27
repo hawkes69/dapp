@@ -1,14 +1,10 @@
 import { useState } from "react";
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Checkbox from "@mui/material/Checkbox";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import ExpandLessIcon from "@mui/icons-material/ExpandLess";
+import { Link } from "react-router-dom";
+
+import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Add, Edit, ExpandLess, ExpandMore } from "@mui/icons-material";
+
+
 import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
 
 function List() {
@@ -28,15 +24,18 @@ function List() {
           <TableRow>
             <TableCell onClick={handleToggle}>
               Completed
-              {toggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              {toggle ? <ExpandLess /> : <ExpandMore />}
             </TableCell>
             <TableCell>
               Attraction
-              {toggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              {toggle ? <ExpandLess /> : <ExpandMore />}
             </TableCell>
             <TableCell>
               Park
-              {toggle ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+              {toggle ? <ExpandLess /> : <ExpandMore />}
+            </TableCell>
+            <TableCell>
+              <Link to="/attractions/new"><Add /></Link>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -56,6 +55,9 @@ function List() {
                 {row.name}
               </TableCell>
               <TableCell>{row.park}</TableCell>
+              <TableCell>
+                <Link to={`/attractions/${row.id}/edit`}><Edit sx={{ fontSize:18 }} /></Link>
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

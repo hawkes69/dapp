@@ -43,6 +43,10 @@ function List() {
               {toggle ? <ExpandLess /> : <ExpandMore />}
             </TableCell>
             <TableCell>
+              Area
+              {toggle ? <ExpandLess /> : <ExpandMore />}
+            </TableCell>
+            <TableCell>
               <Link to="/attractions/new">
                 <Add />
               </Link>
@@ -65,6 +69,7 @@ function List() {
                 {row.name}
               </TableCell>
               <TableCell>{row.park}</TableCell>
+              <TableCell>{row.location}</TableCell>
               <TableCell>
                 <Link to={`/attractions/${row.id}/edit`}>
                   <Edit sx={{ fontSize: 18 }} />

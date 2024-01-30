@@ -813,4 +813,4 @@ Attraction.create!([
 ])
 
 
-p "Created #{Attraction.count} Attractions, this is only Universal rides rn"
+p "Created #{Attraction.count} Attractions"

@@ -1,9 +1,17 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { Checkbox, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import {
+  Checkbox,
+  Paper,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+} from "@mui/material";
 import { Add, Edit, ExpandLess, ExpandMore } from "@mui/icons-material";
-
 
 import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
 
@@ -35,7 +43,9 @@ function List() {
               {toggle ? <ExpandLess /> : <ExpandMore />}
             </TableCell>
             <TableCell>
-              <Link to="/attractions/new"><Add /></Link>
+              <Link to="/attractions/new">
+                <Add />
+              </Link>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -56,7 +66,9 @@ function List() {
               </TableCell>
               <TableCell>{row.park}</TableCell>
               <TableCell>
-                <Link to={`/attractions/${row.id}/edit`}><Edit sx={{ fontSize:18 }} /></Link>
+                <Link to={`/attractions/${row.id}/edit`}>
+                  <Edit sx={{ fontSize: 18 }} />
+                </Link>
               </TableCell>
             </TableRow>
           ))}

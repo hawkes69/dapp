@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { useNavigate  } from 'react-router-dom';
 
 import TextField from "@mui/material/TextField";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -8,11 +8,11 @@ import FormGroup from "@mui/material/FormGroup";
 import Autocomplete from "@mui/material/Autocomplete";
 import Button from "@mui/material/Button";
 
-import { useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../../store/apis/dappApi";
+import { useAddAttractionMutation } from "../../store/apis/dappApi";
 
 function AttractionDetails() {
-  const { id } = useParams();
-  const { data: attraction, isLoading } = useFetchAttractionQuery(id);
+  const navigate = useNavigate ();
+
   const parks = [
     "Magic Kingdom",
     "Epcot",
@@ -22,53 +22,35 @@ function AttractionDetails() {
     "Islands of Adventure",
   ];
 
+  const [addAttraction] = useAddAttractionMutation();
   const [park, setPark] = useState(parks[0]);
   const [inputValue, setInputValue] = useState("");
   const [completed, setCompleted] = useState(false);
-  const [updateAttraction] = useUpdateAttractionMutation();
-  const [removeAttraction] = useRemoveAttractionMutation();
   const [name, setName] = useState("");
-  const navigate = useNavigate();
 
-  const handleDelete = () => {
-    removeAttraction(id);
-    navigate('/attractions');
-  }
-
-  const handleUpdate = () => {
+  const handleAddAttraction = () => {
     const attractionData = {
-      id,
       name,
       park,
       location: "this a location",
-      completed,
+      completed
     };
-
+  
+    addAttraction(attractionData);
     navigate('/attractions');
-    updateAttraction(attractionData);
-  }
-
+  };
   
 
-  useEffect(() => {
-    if (!isLoading) {
-      setPark(attraction.park);
-      setCompleted(attraction.completed);
-      setName(attraction.name);
-    }
-  }, [isLoading]);
-
-  return isLoading ? (
-    <div className="flex items-center justify-center">Loading...</div>
-  ) : (
+  return (
     <div>
       <FormGroup className="flex flex-col m-6 gap-4">
-      <TextField label="Name" 
+        <TextField label="Name" 
           value={name}
           onChange={(event) => {
             setName(event.target.value);
           }}
-        />        <Autocomplete
+        />
+        <Autocomplete
           value={park}
           onChange={(event, newValue) => {
             setPark(newValue);
@@ -83,7 +65,6 @@ function AttractionDetails() {
         <FormControlLabel
           control={
             <Checkbox
-              checked={completed}
               onChange={(event) => {
                 setCompleted(event.target.checked);
               }}
@@ -94,10 +75,7 @@ function AttractionDetails() {
         <div className="outline rounded-lg h-80 flex justify-center align-center">
           map will go here
         </div>
-        <div className="flex justify-center gap-4">
-          <Button variant="contained" onClick={handleUpdate}>Save</Button>
-          <Button variant="contained" color="error" onClick={handleDelete}>Delete</Button>
-        </div>
+        <Button variant="contained" onClick={handleAddAttraction}>Create</Button>
       </FormGroup>
     </div>
   );

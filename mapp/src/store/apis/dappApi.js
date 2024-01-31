@@ -9,14 +9,22 @@ const dappApi = createApi({
   endpoints(builder) {
     return {
       addAttraction: builder.mutation({
-        query: () => {
+        invalidatesTags: ["Attractions"],
+        query: (attraction) => {
           return {
             url: "/attractions",
             method: "POST",
+            body: {
+              name: attraction.name,
+              park: attraction.park,
+              location: attraction.location,
+              completed: attraction.completed,
+            }
           };
         },
       }),
       fetchAttractions: builder.query({
+        providesTags: ["Attractions"],
         query: () => {
           return {
             url: "/attractions",
@@ -25,6 +33,7 @@ const dappApi = createApi({
         },
       }),
       fetchAttraction: builder.query({
+        providesTags: (id) => [{ type: "Attraction", id }],
         query: (id) => {
           return {
             url: `/attractions/${id}`,
@@ -33,6 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
+        invalidatesTags: ["Attractions", "Attraction"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -42,9 +52,10 @@ const dappApi = createApi({
         },
       }),
       removeAttraction: builder.mutation({
-        query: (attraction) => {
+        invalidatesTags: ["Attractions"],
+        query: (id) => {
           return {
-            url: `/attractions/${attraction.id}`,
+            url: `/attractions/${id}`,
             method: "DELETE",
           };
         },

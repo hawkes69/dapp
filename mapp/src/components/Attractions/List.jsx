@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
-  Checkbox,
   Paper,
   Table,
   TableBody,
@@ -11,9 +10,10 @@ import {
   TableHead,
   TableRow,
 } from "@mui/material";
-import { Add, Edit, ExpandLess, ExpandMore } from "@mui/icons-material";
+import { Add, ExpandLess, ExpandMore } from "@mui/icons-material";
 
 import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
+import ListRow from "./ListRow";
 
 function List() {
   const [toggle, setToggle] = useState(false);
@@ -55,27 +55,7 @@ function List() {
         </TableHead>
         <TableBody>
           {data.map((row) => (
-            <TableRow
-              key={row.name}
-              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-            >
-              <TableCell>
-                <Checkbox
-                  checked={row.completed}
-                  inputProps={{ "aria-label": "controlled" }}
-                />
-              </TableCell>
-              <TableCell component="th" scope="row">
-                {row.name}
-              </TableCell>
-              <TableCell>{row.park}</TableCell>
-              <TableCell>{row.location}</TableCell>
-              <TableCell>
-                <Link to={`/attractions/${row.id}/edit`}>
-                  <Edit sx={{ fontSize: 18 }} />
-                </Link>
-              </TableCell>
-            </TableRow>
+            <ListRow key={row.id} row={row} />
           ))}
         </TableBody>
       </Table>

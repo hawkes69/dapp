@@ -17,6 +17,11 @@ This is a working directory that contains a simple app to track the completion p
 * Fog of war map to demonstrate progression
 
 ## TODO
-- [] CRUD actions for attractions db
-- [] Accompanying fe
+-[] park location constants
+-[] dropdowns for locations
+-[] rename location to area
+-[] users table
+-[] user authentication
+-[] user login
+-[] move completion tracking to user table
 

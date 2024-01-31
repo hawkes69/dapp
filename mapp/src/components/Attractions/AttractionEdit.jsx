@@ -44,8 +44,8 @@ function AttractionDetails() {
       completed,
     };
 
-    navigate('/attractions');
     updateAttraction(attractionData);
+    navigate('/attractions');
   }
 
   

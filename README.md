@@ -17,7 +17,8 @@ This is a working directory that contains a simple app to track the completion p
 * Fog of war map to demonstrate progression
 
 ## TODO
--[] Table sorting and reusability
+-[] Shows Table and data
+-[] Restaurants Table and data
 -[] users table
 -[] user authentication
 -[] user login

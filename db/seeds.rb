@@ -341,30 +341,30 @@ Attraction.create!([
     completed: false
   },
 
-  # World showcase
+  # World Showcase
 
   {
     name: "Canada: Far and Wide",
     park: "Epcot",
-    area: "World showcase",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Frozen Ever After",
     park: "Epcot",
-    area: "World showcase",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Gran Fiesta Tour Starring The Three Caballeros",
     park: "Epcot",
-    area: "World showcase",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Remy's Ratatouille Adventure",
     park: "Epcot",
-    area: "World showcase",
+    area: "World Showcase",
     completed: false
   },
 
@@ -674,18 +674,18 @@ Attraction.create!([
     completed: false
   },
 
-  # Star Wars: Galaxy's Edge
+  # Galaxy's Edge
 
   {
     name: "Millennium Falcon: Smugglers Run",
     park: "Hollywood Studios",
-    area: "Star Wars: Galaxy's Edge",
+    area: "Galaxy's Edge",
     completed: false
   },
   {
     name: "Star Wars: Rise of the Resistance",
     park: "Hollywood Studios",
-    area: "Star Wars: Galaxy's Edge",
+    area: "Galaxy's Edge",
     completed: false
   },
   
@@ -744,6 +744,12 @@ Attraction.create!([
     area: "Africa",
     completed: false
   },
+  {
+    name: "Rafiki's Planet Watch",
+    park: "Animal Kingdom",
+    area: "Africa",
+    completed: false
+  },
 
   # Asia
 
@@ -792,7 +798,7 @@ Attraction.create!([
   {
     name: "It's Tough to be a Bug!",
     park: "Animal Kingdom",
-    area: "DinoLand U.S.A.",
+    area: "Discovery Island",
     completed: false
   },
   

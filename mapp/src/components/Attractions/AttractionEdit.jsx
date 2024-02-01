@@ -1,34 +1,26 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import FormGroup from "@mui/material/FormGroup";
-import Autocomplete from "@mui/material/Autocomplete";
-import Button from "@mui/material/Button";
+import { TextField, FormControlLabel, Checkbox, FormGroup, Button } from "@mui/material";
 
-import { useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../../store/apis/dappApi";
+import { useAddAttractionMutation, useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../../store/apis/dappApi";
+import Dropdown from "../Dropdown";
+import { PARK_AREAS } from "../../constants";
 
 function AttractionDetails() {
   const { id } = useParams();
-  const { data: attraction, isLoading } = useFetchAttractionQuery(id);
-  const parks = [
-    "Magic Kingdom",
-    "Epcot",
-    "Hollywood Studios",
-    "Animal Kingdom",
-    "Universal Studio",
-    "Islands of Adventure",
-  ];
+  const navigate = useNavigate();
+  const parks = Object.keys(PARK_AREAS);
 
-  const [park, setPark] = useState(parks[0]);
-  const [inputValue, setInputValue] = useState("");
-  const [completed, setCompleted] = useState(false);
+  const [addAttraction] = useAddAttractionMutation();
+  const { data: attraction, isLoading } = useFetchAttractionQuery(id);
   const [updateAttraction] = useUpdateAttractionMutation();
   const [removeAttraction] = useRemoveAttractionMutation();
+  
+  const [park, setPark] = useState(parks[0]);
+  const [area, setArea] = useState(PARK_AREAS[park][0]);
+  const [completed, setCompleted] = useState(false);
   const [name, setName] = useState("");
-  const navigate = useNavigate();
 
   const handleDelete = () => {
     removeAttraction(id);
@@ -40,7 +32,7 @@ function AttractionDetails() {
       id,
       name,
       park,
-      area: "this a location",
+      area,
       completed,
     };
 
@@ -48,13 +40,24 @@ function AttractionDetails() {
     navigate('/attractions');
   }
 
-  
+  const handleAddAttraction = () => {
+    const attractionData = {
+      name,
+      park,
+      area: "this a location",
+      completed
+    };
+
+    addAttraction(attractionData);
+    navigate('/attractions');
+  }
 
   useEffect(() => {
-    if (!isLoading) {
+    if (!isLoading && id != null) {
       setPark(attraction.park);
       setCompleted(attraction.completed);
       setName(attraction.name);
+      setArea(attraction.area);
     }
   }, [isLoading]);
 
@@ -63,22 +66,23 @@ function AttractionDetails() {
   ) : (
     <div>
       <FormGroup className="flex flex-col m-6 gap-4">
-      <TextField label="Name" 
+        <TextField label="Name" 
           value={name}
           onChange={(event) => {
             setName(event.target.value);
           }}
-        />        <Autocomplete
-          value={park}
-          onChange={(event, newValue) => {
-            setPark(newValue);
-          }}
-          inputValue={inputValue}
-          onInputChange={(event, newInputValue) => {
-            setInputValue(newInputValue);
-          }}
+        />       
+        <Dropdown
           options={parks}
-          renderInput={(params) => <TextField {...params} label="Park" />}
+          value={park}
+          label="Park"
+          setValue={setPark}
+        />
+        <Dropdown
+          options={PARK_AREAS[park]}
+          value={area}
+          label="Area"
+          setValue={setArea}
         />
         <FormControlLabel
           control={
@@ -94,10 +98,16 @@ function AttractionDetails() {
         <div className="outline rounded-lg h-80 flex justify-center align-center">
           map will go here
         </div>
-        <div className="flex justify-center gap-4">
-          <Button variant="contained" onClick={handleUpdate}>Save</Button>
-          <Button variant="contained" color="error" onClick={handleDelete}>Delete</Button>
-        </div>
+        {id != null ? (
+          <div className="flex justify-center gap-4">            
+            <Button variant="contained" onClick={handleUpdate}>Save</Button>
+            <Button variant="contained" color="error" onClick={handleDelete}>Delete</Button>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <Button variant="contained" onClick={handleAddAttraction}>Create</Button>
+          </div>
+        )}
       </FormGroup>
     </div>
   );

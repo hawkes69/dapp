@@ -17,7 +17,7 @@ const dappApi = createApi({
             body: {
               name: attraction.name,
               park: attraction.park,
-              location: attraction.location,
+              area: attraction.area,
               completed: attraction.completed,
             }
           };

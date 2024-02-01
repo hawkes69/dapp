@@ -17,7 +17,7 @@ function AttractionDetails() {
       <div>{attraction.id}</div>
       <div>{attraction.park}</div>
       <div>
-        This will be map coordinates in the future.{attraction.location}
+        This will be map coordinates in the future.{attraction.area}
       </div>
       <div>{attraction.attraction_type}</div>
       <div>{attraction.completed}</div>

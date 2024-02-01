@@ -3,13 +3,13 @@
 one:
   name: MyString
   park: MyString
-  location: MyString
+  area: MyString
   type: 
   completed: false
 
 two:
   name: MyString
   park: MyString
-  location: MyString
+  area: MyString
   type: 
   completed: false

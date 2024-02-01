@@ -40,7 +40,7 @@ function AttractionDetails() {
       id,
       name,
       park,
-      location: "this a location",
+      area: "this a location",
       completed,
     };
 

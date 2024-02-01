@@ -32,7 +32,7 @@ function AttractionDetails() {
     const attractionData = {
       name,
       park,
-      location: "this a location",
+      area: "this a location",
       completed
     };
   

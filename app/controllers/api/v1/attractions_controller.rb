@@ -46,6 +46,6 @@ class Api::V1::AttractionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def attraction_params
-      params.require(:attraction).permit(:name, :park, :location, :type, :completed)
+      params.require(:attraction).permit(:name, :park, :area, :type, :completed)
     end
 end

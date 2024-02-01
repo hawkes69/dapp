@@ -9,13 +9,13 @@ Attraction.create!([
   {
     name: "Despicable Me Minion Mayhem",
     park: "Universal Studios",
-    location: "Minion Land",
+    area: "Minion Land",
     completed: false
   },
   {
     name: "Villian-Con",
     park: "Universal Studios",
-    location: "Minion Land",
+    area: "Minion Land",
     completed: false
   },
   
@@ -24,13 +24,13 @@ Attraction.create!([
   {
     name: "Revenge of the Mummy",
     park: "Universal Studios",
-    location: "New York",
+    area: "New York",
     completed: false
   },
   {
     name: "Race Through New York Starring Jimmy Fallon",
     park: "Universal Studios",
-    location: "New York",
+    area: "New York",
     completed: false
   },
 
@@ -39,13 +39,13 @@ Attraction.create!([
   {
     name: "Hollywood Rip Ride Rockit",
     park: "Universal Studios",
-    location: "Production Central",
+    area: "Production Central",
     completed: false
   },
   {
     name: "Transformers: The Ride 3D",
     park: "Universal Studios",
-    location: "Production Central",
+    area: "Production Central",
     completed: false
   },
   
@@ -54,7 +54,7 @@ Attraction.create!([
   {
     name: "Fast & Furious - Supercharged",
     park: "Universal Studios",
-    location: "San Francisco",
+    area: "San Francisco",
     completed: false
   },
 
@@ -63,13 +63,13 @@ Attraction.create!([
   {
     name: "Harry Potter and the Escape from Gringotts",
     park: "Universal Studios",
-    location: "Diagon Alley",
+    area: "Diagon Alley",
     completed: false
   },
   {
     name: "Hogwarts Express - King's Cross Station",
     park: "Universal Studios",
-    location: "Diagon Alley",
+    area: "Diagon Alley",
     completed: false
   },
 
@@ -78,7 +78,7 @@ Attraction.create!([
   {
     name: "E.T. Adventure",
     park: "Universal Studios",
-    location: "Woody Woodpecker's KidZone",
+    area: "Woody Woodpecker's KidZone",
     completed: false
   },
 
@@ -87,19 +87,19 @@ Attraction.create!([
   {
     name: "Kang & Kodos' Twirl 'n' Hurl",
     park: "Universal Studios",
-    location: "World Expo",
+    area: "World Expo",
     completed: false
   },
   {
     name: "MEN IN BLACK Alien Attack!",
     park: "Universal Studios",
-    location: "World Expo",
+    area: "World Expo",
     completed: false
   },
   {
     name: "The Simpsons Ride",
     park: "Universal Studios",
-    location: "World Expo",
+    area: "World Expo",
     completed: false
   },
 
@@ -110,43 +110,43 @@ Attraction.create!([
   {
     name: "Camp Jurassic",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic Park Discovery Center",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic Park River Adventure",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic World VelociCoaster",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Pteranodon Flyers",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Raptor Encounter",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
   {
     name: "Skull Island: Reign of Kong",
     park: "Islands of Adventure",
-    location: "Jurassic Park",
+    area: "Jurassic Park",
     completed: false
   },
 
@@ -155,25 +155,25 @@ Attraction.create!([
   {
     name: "Doctor Doom's Fearfall",
     park: "Islands of Adventure",
-    location: "Marvel Super Hero Island",
+    area: "Marvel Super Hero Island",
     completed: false
   },
   {
     name: "Storm Force Accelatron",
     park: "Islands of Adventure",
-    location: "Marvel Super Hero Island",
+    area: "Marvel Super Hero Island",
     completed: false
   },
   {
     name: "The Amazing Adventures of Spider-Man",
     park: "Islands of Adventure",
-    location: "Marvel Super Hero Island",
+    area: "Marvel Super Hero Island",
     completed: false
   },
   {
     name: "The Incredible Hulk Coaster",
     park: "Islands of Adventure",
-    location: "Marvel Super Hero Island",
+    area: "Marvel Super Hero Island",
     completed: false
   },
 
@@ -182,31 +182,31 @@ Attraction.create!([
   {
     name: "Caro-Seuss-el",
     park: "Islands of Adventure",
-    location: "Seuss Landing",
+    area: "Seuss Landing",
     completed: false
   },
   {
     name: "If I Ran the Zoo",
     park: "Islands of Adventure",
-    location: "Seuss Landing",
+    area: "Seuss Landing",
     completed: false
   },
   {
     name: "One Fish, Two Fish, Red Fish, Blue Fish",
     park: "Islands of Adventure",
-    location: "Seuss Landing",
+    area: "Seuss Landing",
     completed: false
   },
   {
     name: "The Cat in the Hat",
     park: "Islands of Adventure",
-    location: "Seuss Landing",
+    area: "Seuss Landing",
     completed: false
   },
   {
     name: "The High in the Sky Seuss Trolley Train Ride!",
     park: "Islands of Adventure",
-    location: "Seuss Landing",
+    area: "Seuss Landing",
     completed: false
   },
 
@@ -215,25 +215,25 @@ Attraction.create!([
   {
     name: "Flight of the Hippogriff",
     park: "Islands of Adventure",
-    location: "Hogsmede",
+    area: "Hogsmede",
     completed: false
   },
   {
     name: "Hagrid's Magical Creatures Motorbike Adventure",
     park: "Islands of Adventure",
-    location: "Hogsmede",
+    area: "Hogsmede",
     completed: false
   },
   {
     name: "Harry Potter and the Forbidden Journey",
     park: "Islands of Adventure",
-    location: "Hogsmede",
+    area: "Hogsmede",
     completed: false
   },
   {
     name: "Hogwarts Express - Hogsmeade Station",
     park: "Islands of Adventure",
-    location: "Hogsmede",
+    area: "Hogsmede",
     completed: false
   },
 
@@ -242,19 +242,19 @@ Attraction.create!([
   {
     name: "Dudley Do-Right's Ripsaw Falls",
     park: "Islands of Adventure",
-    location: "Toon Lagoon",
+    area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Me Ship, The Olive",
     park: "Islands of Adventure",
-    location: "Toon Lagoon",
+    area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Popeye & Bluto's Bilge-Rat Barges",
     park: "Islands of Adventure",
-    location: "Toon Lagoon",
+    area: "Toon Lagoon",
     completed: false
   },
 
@@ -265,19 +265,19 @@ Attraction.create!([
   {
     name: "Disney and Pixar Short Film Festival",
     park: "Epcot",
-    location: "World Celebration",
+    area: "World Celebration",
     completed: false
   },
   {
     name: "Journey Into Imagination With Figment",
     park: "Epcot",
-    location: "World Celebration",
+    area: "World Celebration",
     completed: false
   },
   {
     name: "Spaceship Earth",
     park: "Epcot",
-    location: "World Celebration",
+    area: "World Celebration",
     completed: false
   },
 
@@ -286,19 +286,19 @@ Attraction.create!([
   {
     name: "Test Track",
     park: "Epcot",
-    location: "World Discovery",
+    area: "World Discovery",
     completed: false
   },
   {
     name: "Guardians of the Galaxy: Cosmic Rewind",
     park: "Epcot",
-    location: "World Discovery",
+    area: "World Discovery",
     completed: false
   },
   {
     name: "Mission: SPACE",
     park: "Epcot",
-    location: "World Discovery",
+    area: "World Discovery",
     completed: false
   },
 
@@ -307,37 +307,37 @@ Attraction.create!([
   {
     name: "Awesome Planet",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
   {
     name: "Living with the Land",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
   {
     name: "Journey of Water, Inspired by Moana",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
   {
     name: "Soarin' Around the World",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
   {
     name: "The Seas with Nemo & Friends",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
   {
     name: "Turtle Talk with Crush",
     park: "Epcot",
-    location: "World Nature",
+    area: "World Nature",
     completed: false
   },
 
@@ -346,25 +346,25 @@ Attraction.create!([
   {
     name: "Canada: Far and Wide",
     park: "Epcot",
-    location: "World showcase",
+    area: "World showcase",
     completed: false
   },
   {
     name: "Frozen Ever After",
     park: "Epcot",
-    location: "World showcase",
+    area: "World showcase",
     completed: false
   },
   {
     name: "Gran Fiesta Tour Starring The Three Caballeros",
     park: "Epcot",
-    location: "World showcase",
+    area: "World showcase",
     completed: false
   },
   {
     name: "Remy's Ratatouille Adventure",
     park: "Epcot",
-    location: "World showcase",
+    area: "World showcase",
     completed: false
   },
 
@@ -375,31 +375,31 @@ Attraction.create!([
   {
     name: "Jungle Cruise",
     park: "Magic Kingdom",
-    location: "Adventureland",
+    area: "Adventureland",
     completed: false
   },
   {
     name: "Pirates of the Caribbean",
     park: "Magic Kingdom",
-    location: "Adventureland",
+    area: "Adventureland",
     completed: false
   },
   {
     name: "Swiss Family Treehouse",
     park: "Magic Kingdom",
-    location: "Adventureland",
+    area: "Adventureland",
     completed: false
   },
   {
     name: "The Magic Carpets of Aladdin",
     park: "Magic Kingdom",
-    location: "Adventureland",
+    area: "Adventureland",
     completed: false
   },
   {
     name: "Walt Enchanted Tiki Room",
     park: "Magic Kingdom",
-    location: "Adventureland",
+    area: "Adventureland",
     completed: false
   },
 
@@ -408,67 +408,67 @@ Attraction.create!([
   {
     name: "It's a Small World",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Dumbo the Flying Elephant",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Mad Tea Party",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Mickeys PhilharMagic",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Peter Pan's Flight",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Seven Dwargs Mine Train",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "The Barnstormer",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "The Many Adventures of Winnie the Pooh",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Under the Sea - Journey of the Little Mermaid",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Prince Charming Regal Carrousel",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   {
     name: "Walt Disney World Railroad - Fantasyland",
     park: "Magic Kingdom",
-    location: "Fantasyland",
+    area: "Fantasyland",
     completed: false
   },
   
@@ -477,31 +477,31 @@ Attraction.create!([
   {
     name: "Big Thunder Mountain Railroad",
     park: "Magic Kingdom",
-    location: "Frontierland",
+    area: "Frontierland",
     completed: false
   },
   {
     name: "Country Bear Jamboree",
     park: "Magic Kingdom",
-    location: "Frontierland",
+    area: "Frontierland",
     completed: false
   },
   {
     name: "Tiana's Ride",
     park: "Magic Kingdom",
-    location: "Frontierland",
+    area: "Frontierland",
     completed: false
   },
   {
     name: "Tom Sawyer Island",
     park: "Magic Kingdom",
-    location: "Frontierland",
+    area: "Frontierland",
     completed: false
   },
   {
     name: "Walt Disney World Railroad - Frontierland",
     park: "Magic Kingdom",
-    location: "Frontierland",
+    area: "Frontierland",
     completed: false
   },
 
@@ -510,19 +510,19 @@ Attraction.create!([
   {
     name: "The Hall of Presidents",
     park: "Magic Kingdom",
-    location: "Liberty Square",
+    area: "Liberty Square",
     completed: false
   },
   {
     name: "Haunted Mansion",
     park: "Magic Kingdom",
-    location: "Liberty Square",
+    area: "Liberty Square",
     completed: false
   },
   {
     name: "Liberty Square Riverboat",
     park: "Magic Kingdom",
-    location: "Liberty Square",
+    area: "Liberty Square",
     completed: false
   },
 
@@ -531,7 +531,7 @@ Attraction.create!([
   {
     name: "Walt Disney World Railroad - Main Street, U.S.A.",
     park: "Magic Kingdom",
-    location: "Main Street, U.S.A.",
+    area: "Main Street, U.S.A.",
     completed: false
   },
 
@@ -540,49 +540,49 @@ Attraction.create!([
   {
     name: "Astro Orbiter",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Buzz Lightyear's Space Ranger Spin",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Monsters, Inc. Laugh Floor",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Space Mountain",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Tomorrowland Speedway",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Tomorrowland Transit Authority PeopleMover",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Walt Carousel of Progress",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
   {
     name: "Tron Lightcycle / Run",
     park: "Magic Kingdom",
-    location: "Tomorrowland",
+    area: "Tomorrowland",
     completed: false
   },
 
@@ -593,13 +593,13 @@ Attraction.create!([
   {
     name: "Walt Disney Presents",
     park: "Hollywood Studios",
-    location: "Animation Courtyard",
+    area: "Animation Courtyard",
     completed: false
   },
   {
     name: "Disney Junior Play and Dance!",
     park: "Hollywood Studios",
-    location: "Animation Courtyard",
+    area: "Animation Courtyard",
     completed: false
   },
 
@@ -607,31 +607,31 @@ Attraction.create!([
   {
     name: "For the First Time in Forever: A Frozen Sing-Along Celebration",
     park: "Hollywood Studios",
-    location: "Echo Lake",
+    area: "Echo Lake",
     completed: false
   },
   {
     name: "Indiana Jones Epic Stunt Spectacular!",
     park: "Hollywood Studios",
-    location: "Echo Lake",
+    area: "Echo Lake",
     completed: false
   },
   {
     name: "Indiana Jones Epic Stunt Spectacular!",
     park: "Hollywood Studios",
-    location: "Echo Lake",
+    area: "Echo Lake",
     completed: false
   },
   {
     name: "Star Tours – The Adventures Continue",
     park: "Hollywood Studios",
-    location: "Echo Lake",
+    area: "Echo Lake",
     completed: false
   },
   {
     name: "Vacation Fun - An Original Animated Short with Mickey & Minnie",
     park: "Hollywood Studios",
-    location: "Echo Lake",
+    area: "Echo Lake",
     completed: false
   },
 
@@ -640,7 +640,7 @@ Attraction.create!([
   {
     name: "Mickey & Minnie's Runaway Railway",
     park: "Hollywood Studios",
-    location: "Hollywood Boulevard",
+    area: "Hollywood Boulevard",
     completed: false
   },
 
@@ -649,7 +649,7 @@ Attraction.create!([
   {
     name: "Muppet*Vision 3D",
     park: "Hollywood Studios",
-    location: "Hollywood Boulevard",
+    area: "Hollywood Boulevard",
     completed: false
   },
 
@@ -658,19 +658,19 @@ Attraction.create!([
   {
     name: "Toy Story Mania!",
     park: "Hollywood Studios",
-    location: "Toy Story Land",
+    area: "Toy Story Land",
     completed: false
   },
   {
     name: "Alien Swirling Saucers",
     park: "Hollywood Studios",
-    location: "Toy Story Land",
+    area: "Toy Story Land",
     completed: false
   },
   {
     name: "Slinky Dog Dash",
     park: "Hollywood Studios",
-    location: "Toy Story Land",
+    area: "Toy Story Land",
     completed: false
   },
 
@@ -679,13 +679,13 @@ Attraction.create!([
   {
     name: "Millennium Falcon: Smugglers Run",
     park: "Hollywood Studios",
-    location: "Star Wars: Galaxy's Edge",
+    area: "Star Wars: Galaxy's Edge",
     completed: false
   },
   {
     name: "Star Wars: Rise of the Resistance",
     park: "Hollywood Studios",
-    location: "Star Wars: Galaxy's Edge",
+    area: "Star Wars: Galaxy's Edge",
     completed: false
   },
   
@@ -694,25 +694,25 @@ Attraction.create!([
   {
     name: "Beauty and the Beast - Live on Stage",
     park: "Hollywood Studios",
-    location: "Sunset Boulevard",
+    area: "Sunset Boulevard",
     completed: false
   },
   {
     name: "Lightning McQueen's Racing Academy",
     park: "Hollywood Studios",
-    location: "Sunset Boulevard",
+    area: "Sunset Boulevard",
     completed: false
   },
   {
     name: "Rock 'n' Roller Coaster Starring Aerosmith",
     park: "Hollywood Studios",
-    location: "Sunset Boulevard",
+    area: "Sunset Boulevard",
     completed: false
   },
   {
     name: "The Twilight Zone Tower of Terror",
     park: "Hollywood Studios",
-    location: "Sunset Boulevard",
+    area: "Sunset Boulevard",
     completed: false
   },
 
@@ -723,25 +723,25 @@ Attraction.create!([
   {
     name: "Festival of the Lion King",
     park: "Animal Kingdom",
-    location: "Africa",
+    area: "Africa",
     completed: false
   },
   {
     name: "Gorilla Falls Exploration Trail",
     park: "Animal Kingdom",
-    location: "Africa",
+    area: "Africa",
     completed: false
   },
   {
     name: "Kilimanjaro Safaris",
     park: "Animal Kingdom",
-    location: "Africa",
+    area: "Africa",
     completed: false
   },
   {
     name: "Wildlife Express Train",
     park: "Animal Kingdom",
-    location: "Africa",
+    area: "Africa",
     completed: false
   },
 
@@ -750,19 +750,19 @@ Attraction.create!([
   {
     name: "Expedition Everest - Legend of the Forbidden Mountain",
     park: "Animal Kingdom",
-    location: "Asia",
+    area: "Asia",
     completed: false
   },
   {
     name: "Kali River Rapids",
     park: "Animal Kingdom",
-    location: "Asia",
+    area: "Asia",
     completed: false
   },
   {
     name: "Feathered Friends in Flight!",
     park: "Animal Kingdom",
-    location: "Asia",
+    area: "Asia",
     completed: false
   },
 
@@ -771,19 +771,19 @@ Attraction.create!([
   {
     name: "DINOSAUR",
     park: "Animal Kingdom",
-    location: "DinoLand U.S.A.",
+    area: "DinoLand U.S.A.",
     completed: false
   },
   {
     name: "Finding Nemo: The Big Blue... and Beyond!",
     park: "Animal Kingdom",
-    location: "DinoLand U.S.A.",
+    area: "DinoLand U.S.A.",
     completed: false
   },
   {
     name: "TriceraTop Spin",
     park: "Animal Kingdom",
-    location: "DinoLand U.S.A.",
+    area: "DinoLand U.S.A.",
     completed: false
   },
 
@@ -792,7 +792,7 @@ Attraction.create!([
   {
     name: "It's Tough to be a Bug!",
     park: "Animal Kingdom",
-    location: "DinoLand U.S.A.",
+    area: "DinoLand U.S.A.",
     completed: false
   },
   
@@ -801,13 +801,13 @@ Attraction.create!([
   {
     name: "Avatar Flight of Passage",
     park: "Animal Kingdom",
-    location: "Pandora",
+    area: "Pandora",
     completed: false
   },
   {
     name: "Na'vi River Journey",
     park: "Animal Kingdom",
-    location: "Pandora",
+    area: "Pandora",
     completed: false
   },
 ])

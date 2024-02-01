@@ -38,7 +38,7 @@ function ListRow({ row }) {
         {row.name}
       </TableCell>
       <TableCell>{row.park}</TableCell>
-      <TableCell>{row.location}</TableCell>
+      <TableCell>{row.area}</TableCell>
       <TableCell>
         <Link to={`/attractions/${row.id}/edit`}>
           <Edit sx={{ fontSize: 18 }} />

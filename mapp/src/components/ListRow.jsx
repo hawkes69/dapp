@@ -11,7 +11,7 @@ import { Edit } from "@mui/icons-material";
 
 import PropTypes from 'prop-types';
 
-import { useUpdateAttractionMutation } from "../../store/apis/dappApi";
+import { useUpdateAttractionMutation } from "../store/apis/dappApi";
 
 function ListRow({ row }) {
   const [updateAttraction] = useUpdateAttractionMutation();

@@ -1,5 +1,6 @@
 import CastleIcon from "@mui/icons-material/Castle";
 import { Link } from "react-router-dom";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 function Navbar() {
   return (
@@ -8,7 +9,10 @@ function Navbar() {
         <CastleIcon />
       </Link>
       <Link to="/attractions">Attractions</Link>
+      <Link to="/shows">Shows</Link>
+      <Link to="/restaurants">Restaurants</Link>
       <Link to="/map">Map</Link>
+      <AccountCircleIcon />
     </div>
   );
 }

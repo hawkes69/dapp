@@ -821,8 +821,10 @@ Attraction.create!([
 ])
 
 Show.create!([
-  # Universal Studio
+  # Universal Studios
+    {
 
+    }
   # Minion Land
 
   # New York
@@ -870,6 +872,64 @@ Show.create!([
   # Discovery Island
   # Pandora
 
+])
+
+Restaurant.create!([
+  # Universal Studios
+
+  # Minion Land
+
+  {
+    name: "Minion Cafe",
+    park: "Universal Studios",
+    area: "Minion Land",
+    completed: false
+  }
+
+  # New York
+
+  # Production Central
+
+  # San Francisco
+
+  # Diagon Alley
+
+  # Woody Woodpecker's KidZone
+
+  # World Expo
+
+  # Islands of Adventure
+  # Jurassic Park
+  # Marvel Super Hero Island
+  # Seuss Landing
+  # Hogsmede
+  # Toon Lagoon
+  # EPCOT
+  # World Celebration
+  # World Discovery 
+  # World Nature
+  # World Showcase
+  # Magic Kingdom
+  # Adventureland
+  # Fantasyland
+  # Frontierland
+  # Liberty Square
+  # Main Street, U.S.A.
+  # Tomorrowland
+  # Hollywood Studios
+  # Animation Courtyard
+  # Echo Lake
+  # Hollywood Boulevard
+  # Muppet Courtyard
+  # Toy Story Land
+  # Galaxy's Edge
+  # Sunset Boulevard
+  # Animal Kingdom
+  # Africa
+  # Asia
+  # DinoLand U.S.A.
+  # Discovery Island
+  # Pandora
 ])
 
 

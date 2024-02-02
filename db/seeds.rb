@@ -1195,13 +1195,121 @@ Restaurant.create!([
     completed: false
   },
   {
-    name: "Le Cellier",
+    name: "Biergarten Restaurant",
     park: "Epcot",
     area: "World Showcase ",
     completed: false
   },
   {
-    name: "Le Cellier",
+    name: "Sommerfest",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Tutto Gusto Wine Cellar",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Tutto Italia Ristorante",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Via Napoli",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Katsura Grill",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Shiki-Sai: Sushi Izakaya",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Takumi-Tei",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Teppan Edo",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Tokyo Dining",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "La Cantina de San Angel",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "La Hacienda de San Angel",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "San Angel Inn Restaurante",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Restaurant Marrakesh",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Spice Road Table",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Tangierine Cafe",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Akershus Royal Banquet Hall",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Kringla Bakeri Og Kafe",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Rose and Crown",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Yorkshire County Fish Shop",
     park: "Epcot",
     area: "World Showcase ",
     completed: false

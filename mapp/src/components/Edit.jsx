@@ -3,11 +3,11 @@ import { useParams, useNavigate } from "react-router-dom";
 
 import { TextField, FormControlLabel, Checkbox, FormGroup, Button } from "@mui/material";
 
-import { useAddAttractionMutation, useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../../store/apis/dappApi";
-import Dropdown from "../Dropdown";
-import { PARK_AREAS } from "../../constants";
+import { useAddAttractionMutation, useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../store/apis/dappApi";
+import Dropdown from "./Dropdown";
+import { PARK_AREAS } from "../constants";
 
-function AttractionDetails() {
+function Edit() {
   const { id } = useParams();
   const navigate = useNavigate();
   const parks = Object.keys(PARK_AREAS);
@@ -113,4 +113,4 @@ function AttractionDetails() {
   );
 }
 
-export default AttractionDetails;
+export default Edit;

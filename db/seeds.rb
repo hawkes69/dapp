@@ -1,4 +1,6 @@
 Attraction.destroy_all
+Show.destroy_all
+Restaurant.destroy_all
 
 Attraction.create!([
 
@@ -818,5 +820,59 @@ Attraction.create!([
   },
 ])
 
+Show.create!([
+  # Universal Studio
+
+  # Minion Land
+
+  # New York
+
+  # Production Central
+
+  # San Francisco
+
+  # Diagon Alley
+
+  # Woody Woodpecker's KidZone
+
+  # World Expo
+
+  # Islands of Adventure
+  # Jurassic Park
+  # Marvel Super Hero Island
+  # Seuss Landing
+  # Hogsmede
+  # Toon Lagoon
+  # EPCOT
+  # World Celebration
+  # World Discovery 
+  # World Nature
+  # World Showcase
+  # Magic Kingdom
+  # Adventureland
+  # Fantasyland
+  # Frontierland
+  # Liberty Square
+  # Main Street, U.S.A.
+  # Tomorrowland
+  # Hollywood Studios
+  # Animation Courtyard
+  # Echo Lake
+  # Hollywood Boulevard
+  # Muppet Courtyard
+  # Toy Story Land
+  # Galaxy's Edge
+  # Sunset Boulevard
+  # Animal Kingdom
+  # Africa
+  # Asia
+  # DinoLand U.S.A.
+  # Discovery Island
+  # Pandora
+
+])
+
 
 p "Created #{Attraction.count} Attractions"
+p "Created #{Show.count} Shows"
+p "Created #{Restaurant.count} Restaurants"

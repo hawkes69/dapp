@@ -41,7 +41,6 @@ function ListRow({ row, type }) {
             }}
           />
         }
-        label="Completed"
       />
       </TableCell>
       <TableCell component="th" scope="row">

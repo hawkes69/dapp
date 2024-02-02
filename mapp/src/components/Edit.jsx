@@ -1,34 +1,78 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import { TextField, FormControlLabel, Checkbox, FormGroup, Button } from "@mui/material";
 
-import { useAddAttractionMutation, useFetchAttractionQuery, useUpdateAttractionMutation, useRemoveAttractionMutation } from "../store/apis/dappApi";
+import { 
+  useAddAttractionMutation,
+  useFetchAttractionQuery,
+  useUpdateAttractionMutation,
+  useRemoveAttractionMutation,
+  useAddRestaurantMutation,
+  useFetchRestaurantQuery,
+  useUpdateRestaurantMutation,
+  useRemoveRestaurantMutation,
+  useAddShowMutation,
+  useFetchShowQuery,
+  useUpdateShowMutation,
+  useRemoveShowMutation,
+} from "../store/apis/dappApi";
+
 import Dropdown from "./Dropdown";
 import { PARK_AREAS } from "../constants";
 
-function Edit() {
+function Edit({ type }) {  
   const { id } = useParams();
   const navigate = useNavigate();
   const parks = Object.keys(PARK_AREAS);
 
-  const [addAttraction] = useAddAttractionMutation();
-  const { data: attraction, isLoading } = useFetchAttractionQuery(id);
-  const [updateAttraction] = useUpdateAttractionMutation();
-  const [removeAttraction] = useRemoveAttractionMutation();
-  
+  const [name, setName] = useState("");
   const [park, setPark] = useState(parks[0]);
   const [area, setArea] = useState(PARK_AREAS[park][0]);
   const [completed, setCompleted] = useState(false);
-  const [name, setName] = useState("");
 
+  let mutationVariables;
+  
+  // This is bad practice because hooks shouldn't be called like this. However it does work. SO may help but for now I'm leaving as is. 
+
+  if (type === "attractions") {
+    mutationVariables = {
+      addMutation: useAddAttractionMutation()[0],
+      updateMutation: useUpdateAttractionMutation()[0],
+      removeMutation: useRemoveAttractionMutation()[0],
+      fetchData: useFetchAttractionQuery(id),
+    };
+  } else if (type === "restaurants") {
+    mutationVariables = {
+      addMutation: useAddRestaurantMutation()[0],
+      updateMutation: useUpdateRestaurantMutation()[0],
+      removeMutation: useRemoveRestaurantMutation()[0],
+      fetchData: useFetchRestaurantQuery(id),
+    };
+  } else if (type === "shows") {
+    mutationVariables = {
+      addMutation: useAddShowMutation()[0],
+      updateMutation: useUpdateShowMutation()[0],
+      removeMutation: useRemoveShowMutation()[0],
+      fetchData: useFetchShowQuery(id),
+    };
+  }
+  
+  const {
+    addMutation,
+    updateMutation,
+    removeMutation,
+    fetchData: { data, isLoading },
+  } = mutationVariables;
+  
   const handleDelete = () => {
-    removeAttraction(id);
-    navigate('/attractions');
+    removeMutation(id);
+    navigate(`/${type}`);
   }
 
   const handleUpdate = () => {
-    const attractionData = {
+    const updateData = {
       id,
       name,
       park,
@@ -36,11 +80,11 @@ function Edit() {
       completed,
     };
 
-    updateAttraction(attractionData);
-    navigate('/attractions');
+    updateMutation(updateData);
+    navigate(`/${type}`);
   }
 
-  const handleAddAttraction = () => {
+  const handleAdd = () => {
     const attractionData = {
       name,
       park,
@@ -48,16 +92,16 @@ function Edit() {
       completed
     };
 
-    addAttraction(attractionData);
-    navigate('/attractions');
+    addMutation(attractionData);
+    navigate(`/${type}`);
   }
 
   useEffect(() => {
     if (!isLoading && id != null) {
-      setPark(attraction.park);
-      setCompleted(attraction.completed);
-      setName(attraction.name);
-      setArea(attraction.area);
+      setPark(data.park);
+      setCompleted(data.completed);
+      setName(data.name);
+      setArea(data.area);
     }
   }, [isLoading]);
 
@@ -105,7 +149,7 @@ function Edit() {
           </div>
         ) : (
           <div className="flex justify-center">
-            <Button variant="contained" onClick={handleAddAttraction}>Create</Button>
+            <Button variant="contained" onClick={handleAdd}>Create</Button>
           </div>
         )}
       </FormGroup>
@@ -114,3 +158,7 @@ function Edit() {
 }
 
 export default Edit;
+
+Edit.propTypes = {
+  type: PropTypes.string.isRequired,
+};

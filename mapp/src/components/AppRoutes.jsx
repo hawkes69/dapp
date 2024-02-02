@@ -11,14 +11,14 @@ function AppRoutes() {
     <Routes>
       <Route exact path="/" element={<Completions />} />
       <Route exact path="/attractions" element={<Attractions />} />
-      <Route exact path="/attractions/:id/edit" element={<Edit />} />
-      <Route exact path="/attractions/new" element={<Edit />} />
+      <Route exact path="/attractions/:id/edit" element={<Edit type="attractions" />} />
+      <Route exact path="/attractions/new" element={<Edit type="attractions" />} />
       <Route exact path="/shows" element={<Shows />} />
-      <Route exact path="/shows/:id/edit" element={<Edit />} />
-      <Route exact path="/shows/new" element={<Edit />} />
+      <Route exact path="/shows/:id/edit" element={<Edit type="shows" />} />
+      <Route exact path="/shows/new" element={<Edit type="shows"/>} />
       <Route exact path="/restaurants" element={<Restaurants />} />
-      <Route exact path="/restaurants/:id/edit" element={<Edit />} />
-      <Route exact path="/restaurants/new" element={<Edit />} />
+      <Route exact path="/restaurants/:id/edit" element={<Edit type="restaurants" />} />
+      <Route exact path="/restaurants/new" element={<Edit type="restaurants"/>} />
       <Route exact path="/map" element={<Map />} />
     </Routes>
   );

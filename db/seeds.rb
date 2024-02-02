@@ -824,7 +824,7 @@ Show.create!([
   # Universal Studios
     {
 
-    }
+    },
   # Minion Land
 
   # New York
@@ -884,31 +884,329 @@ Restaurant.create!([
     park: "Universal Studios",
     area: "Minion Land",
     completed: false
-  }
+  },
+
+  # Hollywood
+
+  {
+    name: "Cafe La Bamba",
+    park: "Universal Studios",
+    area: "Hollywood",
+    completed: false
+  },
+  {
+    name: "Mel's Drive-In",
+    park: "Universal Studios",
+    area: "Hollywood",
+    completed: false
+  },
 
   # New York
 
+  {
+    name: "Louie's Italian Restaurant",
+    park: "Universal Studios",
+    area: "New York",
+    completed: false
+  },
+  {
+    name: "Finnegan's Bar & Grill",
+    park: "Universal Studios",
+    area: "New York",
+    completed: false
+  },
+
   # Production Central
+
+  {
+    name: "TODAY Cafe",
+    park: "Universal Studios",
+    area: "Production Central",
+    completed: false
+  },
 
   # San Francisco
 
+  {
+    name:  "San Francisco Pastry Company",
+    park: "Universal Studios",
+    area: "San Francisco",
+    completed: false
+  },
+  {
+    name: "Richter's Burger Co.",
+    park: "Universal Studios",
+    area: "San Francisco",
+    completed: false
+  },
+  {
+    name: "Lombard's Seafood Grille",
+    park: "Universal Studios",
+    area: "San Francisco",
+    completed: false
+  },
+
   # Diagon Alley
 
+  {
+    name: "The Leaky Cauldron",
+    park: "Universal Studios",
+    area: "Diagon Alley",
+    completed: false
+  },
+
   # Woody Woodpecker's KidZone
+  {
+    name: "KidZone Pizza Company",
+    park: "Universal Studios",
+    area: "Woody Woodpecker's KidZone",
+    completed: false
+  },
 
   # World Expo
 
+  # Springfield
+
+  {
+    name: "The Frying Dutchman",
+    park: "Universal Studios",
+    area: "Springfield",
+    completed: false
+  },
+  {
+    name: "Cletus' Chicken Shack",
+    park: "Universal Studios",
+    area: "Springfield",
+    completed: false
+  },
+  {
+    name: "Krusty Burger",
+    park: "Universal Studios",
+    area: "Springfield",
+    completed: false
+  },
+  {
+    name: "Luigi's Pizza",
+    park: "Universal Studios",
+    area: "Springfield",
+    completed: false
+  },
+
   # Islands of Adventure
+
   # Jurassic Park
+
+  {
+    name: "Pizza Predattoria",
+    park: "Islands of Adventure",
+    area: "Jurassic Park",
+    completed: false
+  },
+
   # Marvel Super Hero Island
+
+  {
+    name: "Marvel Character Dinner",
+    park: "Islands of Adventure",
+    area: "Marvel Super Hero Island",
+    completed: false
+  },
+  {
+    name: "Cafe 4",
+    park: "Islands of Adventure",
+    area: "Marvel Super Hero Island",
+    completed: false
+  },
+  {
+    name: "Captain America Diner",
+    park: "Islands of Adventure",
+    area: "Marvel Super Hero Island",
+    completed: false
+  },
+
+  # Port of Entry
+
+  {
+    name: "Confisco Grille",
+    park: "Islands of Adventure",
+    area: "Port of Entry",
+    completed: false
+  },
+  {
+    name: "Croissant Moon Bakery",
+    park: "Islands of Adventure",
+    area: "Port of Entry",
+    completed: false
+  },
+
   # Seuss Landing
+  {
+    name: "Green Eggs and Ham Cafe",
+    park: "Islands of Adventure",
+    area: "Seuss Landing",
+    completed: false
+  },
+  {
+    name: "Circus McGurkus Cafe Stoo-pendous",
+    park: "Islands of Adventure",
+    area: "Seuss Landing",
+    completed: false
+  },
+
+  # Lost Continent
+
+  {
+    name: "Mythos Restaurant",
+    park: "Islands of Adventure",
+    area: "Lost Continent",
+    completed: false
+  },
+  {
+    name: "Doc Sugrue's Desert Kebab House",
+    park: "Islands of Adventure",
+    area: "Lost Continent",
+    completed: false
+  },
+  {
+    name: "Fire Eater's Grill",
+    park: "Islands of Adventure",
+    area: "Lost Continent",
+    completed: false
+  },
+
   # Hogsmede
+
+  {
+    name: "Three Broomsticks",
+    park: "Islands of Adventure",
+    area: "Hogsmede",
+    completed: false
+  },
+  {
+    name: "Hogs Head",
+    park: "Islands of Adventure",
+    area: "Hogsmede",
+    completed: false
+  },
+
   # Toon Lagoon
+
+  {
+    name: "Wimpy's",
+    park: "Islands of Adventure",
+    area: "Toon Lagoon",
+    completed: false
+  },
+  {
+    name: "Comic Strip Cafe",
+    park: "Islands of Adventure",
+    area: "Toon Lagoon",
+    completed: false
+  },
+  {
+    name: "Blondie's",
+    park: "Islands of Adventure",
+    area: "Toon Lagoon",
+    completed: false
+  },
+
   # EPCOT
+
   # World Celebration
+
+  {
+    name: "Connections Eatery & Cafe",
+    park: "Epcot",
+    area: "World Celebration",
+    completed: false
+  },
+  
   # World Discovery 
+
+  {
+    name: "Space 220",
+    park: "Epcot",
+    area: "World Discovery ",
+    completed: false
+  },
+
   # World Nature
+
+  {
+    name: "Coral Reef Restaurant",
+    park: "Epcot",
+    area: "World Nature ",
+    completed: false
+  },
+  {
+    name: "The Garden Grill",
+    park: "Epcot",
+    area: "World Nature ",
+    completed: false
+  },
+  {
+    name: "Sunshine Seasons",
+    park: "Epcot",
+    area: "World Nature ",
+    completed: false
+  },
+
   # World Showcase
+
+  {
+    name: "Regal Eagle Smokehouse",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Le Cellier",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Nine Dragons Restaurant",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Lotus Blossom Cafe",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },  {
+    name: "Les Halles",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Chefs de France",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Monsieur Paul",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Le Cellier",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+  {
+    name: "Le Cellier",
+    park: "Epcot",
+    area: "World Showcase ",
+    completed: false
+  },
+
   # Magic Kingdom
   # Adventureland
   # Fantasyland

@@ -52,7 +52,7 @@ function List({ type, data, isLoading }) {
               row.park.toLowerCase().includes(query) ||
               row.area.toLowerCase().includes(query)
               ).map((row) => (
-              <ListRow key={row.id} row={row} />
+              <ListRow key={row.id} row={row} type={type}/>
             ))}
           </TableBody>
         </Table>

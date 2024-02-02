@@ -10,8 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_01_164012) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_02_001656) do
   create_table "attractions", force: :cascade do |t|
+    t.string "name"
+    t.string "park"
+    t.string "area"
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "restaurants", force: :cascade do |t|
+    t.string "name"
+    t.string "park"
+    t.string "area"
+    t.boolean "completed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shows", force: :cascade do |t|
     t.string "name"
     t.string "park"
     t.string "area"

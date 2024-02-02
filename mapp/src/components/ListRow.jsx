@@ -12,9 +12,13 @@ import { Edit } from "@mui/icons-material";
 import PropTypes from 'prop-types';
 
 import { useUpdateAttractionMutation } from "../store/apis/dappApi";
+import { useUpdateRestaurantMutation } from "../store/apis/dappApi";
+import { useUpdateShowMutation } from "../store/apis/dappApi";
 
-function ListRow({ row }) {
+function ListRow({ row, type }) {
   const [updateAttraction] = useUpdateAttractionMutation();
+  const [updateRestaurant] = useUpdateRestaurantMutation();
+  const [updateShow] = useUpdateShowMutation();
 
   return (
     <TableRow
@@ -27,7 +31,13 @@ function ListRow({ row }) {
           <Checkbox
             checked={row.completed}
             onChange={(event) => {
-              updateAttraction({ ...row, completed: event.target.checked });
+              if (type === "Attractions") {
+                updateAttraction({ ...row, completed: event.target.checked });
+              } else if (type === "Restaurants") {
+                updateRestaurant({ ...row, completed: event.target.checked });
+              } else if (type === "Shows") {
+                updateShow({ ...row, completed: event.target.checked });
+              }
             }}
           />
         }
@@ -40,16 +50,17 @@ function ListRow({ row }) {
       <TableCell>{row.park}</TableCell>
       <TableCell>{row.area}</TableCell>
       <TableCell>
-        <Link to={`/attractions/${row.id}/edit`}>
+        <Link to={`/${type.toLowerCase()}/${row.id}/edit`}>
           <Edit sx={{ fontSize: 18 }} />
         </Link>
       </TableCell>
     </TableRow>
-  )
+  );
 }
 
 export default ListRow;
 
 ListRow.propTypes = {
   row: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired
 };

@@ -1129,6 +1129,12 @@ Restaurant.create!([
     area: "World Discovery ",
     completed: false
   },
+  {
+    name: "The Odyssey",
+    park: "Epcot",
+    area: "World Discovery ",
+    completed: false
+  },
 
   # World Nature
 
@@ -1156,172 +1162,287 @@ Restaurant.create!([
   {
     name: "Regal Eagle Smokehouse",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Le Cellier",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Nine Dragons Restaurant",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Lotus Blossom Cafe",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },  {
     name: "Les Halles",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Chefs de France",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Monsieur Paul",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Biergarten Restaurant",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Sommerfest",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Tutto Gusto Wine Cellar",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Tutto Italia Ristorante",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Via Napoli",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Katsura Grill",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Shiki-Sai: Sushi Izakaya",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Takumi-Tei",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Teppan Edo",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Tokyo Dining",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "La Cantina de San Angel",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "La Hacienda de San Angel",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "San Angel Inn Restaurante",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Restaurant Marrakesh",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Spice Road Table",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Tangierine Cafe",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Akershus Royal Banquet Hall",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Kringla Bakeri Og Kafe",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Rose and Crown",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
   {
     name: "Yorkshire County Fish Shop",
     park: "Epcot",
-    area: "World Showcase ",
+    area: "World Showcase",
     completed: false
   },
 
   # Magic Kingdom
+
   # Adventureland
+
+  {
+    name: "Tortuga Tavern",
+    park: "Magic Kingdom",
+    area: "Adventureland",
+    completed: false
+  },
+  {
+    name: "Skipper Canteen",
+    park: "Magic Kingdom",
+    area: "Adventureland",
+    completed: false
+  },
+
   # Fantasyland
+
+  {
+    name: "Be Our Guest",
+    park: "Magic Kingdom",
+    area: "Fantasyland",
+    completed: false
+  },
+  {
+    name: "Cinderella’s Royal Table",
+    park: "Magic Kingdom",
+    area: "Fantasyland",
+    completed: false
+  },
+  {
+    name: "Gaston's Tavern",
+    park: "Magic Kingdom",
+    area: "Fantasyland",
+    completed: false
+  },
+  {
+    name: "Pinocchio Village Haus",
+    park: "Magic Kingdom",
+    area: "Fantasyland",
+    completed: false
+  },
+
   # Frontierland
+
+  {
+    name: "Diamond Horseshoe",
+    park: "Magic Kingdom",
+    area: "Frontierland",
+    completed: false
+  },
+  {
+    name: "Pecos Bill",
+    park: "Magic Kingdom",
+    area: "Frontierland",
+    completed: false
+  },
+
   # Liberty Square
+
+  {
+    name: "Columbia Harbour House",
+    park: "Magic Kingdom",
+    area: "Liberty Square",
+    completed: false
+  },
+  {
+    name: "Liberty Tree Tavern",
+    park: "Magic Kingdom",
+    area: "Liberty Square",
+    completed: false
+  },
+
   # Main Street, U.S.A.
+
+  {
+    name: "Casey’s Corner",
+    park: "Magic Kingdom",
+    area: "Main Street, U.S.A.",
+    completed: false
+  },
+  {
+    name: "Crystal Palace",
+    park: "Magic Kingdom",
+    area: "Main Street, U.S.A.",
+    completed: false
+  },
+  {
+    name: "Plaza Restaurant",
+    park: "Magic Kingdom",
+    area: "Main Street, U.S.A.",
+    completed: false
+  },
+  {
+    name: "Tony's Town Square",
+    park: "Magic Kingdom",
+    area: "Main Street, U.S.A.",
+    completed: false
+  },
+
   # Tomorrowland
+
+  {
+    name: "Tomorrowland Terrace",
+    park: "Magic Kingdom",
+    area: "Tomorrowland",
+    completed: false
+  },
+  {
+    name: "Lunching Pad",
+    park: "Magic Kingdom",
+    area: "Tomorrowland",
+    completed: false
+  },
+  {
+    name: "Cosmic Ray’s Starlight Cafe",
+    park: "Magic Kingdom",
+    area: "Tomorrowland",
+    completed: false
+  },
+
   # Hollywood Studios
   # Animation Courtyard
   # Echo Lake

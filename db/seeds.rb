@@ -823,7 +823,7 @@ Attraction.create!([
 Show.create!([
   # Universal Studios
     {
-
+      
     },
   # Minion Land
 
@@ -1444,19 +1444,188 @@ Restaurant.create!([
   },
 
   # Hollywood Studios
-  # Animation Courtyard
+
+  # Commisary Lane
+
+  {
+    name: "ABC Commissary",
+    park: "Hollywood Studios",
+    area: "Commisary Lane",
+    completed: false
+  },
+  {
+    name: "Sci Fi Dine-In Theater",
+    park: "Hollywood Studios",
+    area: "Commisary Lane",
+    completed: false
+  },
+
   # Echo Lake
+
+  {
+    name: "’50s Prime Time Cafe",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+  {
+    name: "Backlot Express",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+  {
+    name: "Hollywood and Vine",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+
+  # Grand Avenue
+
+  {
+    name: "Mama Melrose’s Ristorante Italiano",
+    park: "Hollywood Studios",
+    area: "Grand Avenue",
+    completed: false
+  },
+  {
+    name: "PizzeRizzo",
+    park: "Hollywood Studios",
+    area: "Grand Avenue",
+    completed: false
+  },
+
   # Hollywood Boulevard
-  # Muppet Courtyard
+
+  {
+    name: "Hollywood Brown Derby",
+    park: "Hollywood Studios",
+    area: "Hollywood Boulevard",
+    completed: false
+  },
+
   # Toy Story Land
+
+  {
+    name: "Woody’s Lunch Box",
+    park: "Hollywood Studios",
+    area: "Toy Story Land",
+    completed: false
+  },
+  {
+    name: "Roundup Rodeo BBQ",
+    park: "Hollywood Studios",
+    area: "Toy Story Land",
+    completed: false
+  },
+
   # Galaxy's Edge
-  # Sunset Boulevard
+
+  {
+    name: "Docking Bay 7",
+    park: "Hollywood Studios",
+    area: "Galaxy's Edge",
+    completed: false
+  },
+  {
+    name: "Oga’s Cantina",
+    park: "Hollywood Studios",
+    area: "Galaxy's Edge",
+    completed: false
+  },
+  {
+    name: "Ronto Roasters",
+    park: "Hollywood Studios",
+    area: "Galaxy's Edge",
+    completed: false
+  },
+
   # Animal Kingdom
+
   # Africa
+
+  {
+    name: "Harambe Market",
+    park: "Animal Kingdom",
+    area: "Africa",
+    completed: false
+  },
+  {
+    name: "Tusker House Restaurant",
+    park: "Animal Kingdom",
+    area: "Africa",
+    completed: false
+  },
+  
   # Asia
+
+  {
+    name: "Local Food Cafes",
+    park: "Animal Kingdom",
+    area: "Asia",
+    completed: false
+  },
+  {
+    name: "Yak and Yeti Restaurant",
+    park: "Animal Kingdom",
+    area: "Asia",
+    completed: false
+  },
+
   # DinoLand U.S.A.
+
+  {
+    name: "Restaurantosaurus",
+    park: "Animal Kingdom",
+    area: "DinoLand U.S.A.",
+    completed: false
+  },
+
   # Discovery Island
+
+  {
+    name: "Tiffins",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+  {
+    name: "Pizzafari",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+  {
+    name: "Nomad Lounge",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+  {
+    name: "Flame Tree BBQ",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+
   # Pandora
+
+  {
+    name: "Satu’li Canteen",
+    park: "Animal Kingdom",
+    area: "Pandora",
+    completed: false
+  },
+
+  # Entrance
+
+  {
+    name: "Rainforest Cafe",
+    park: "Animal Kingdom",
+    area: "Entrance",
+    completed: false
+  },
 ])
 
 

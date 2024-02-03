@@ -822,25 +822,65 @@ Attraction.create!([
 
 Show.create!([
   # Universal Studios
-    {
-      
-    },
-  # Minion Land
+
+  # Hollywood
+
+  {
+    name: "The Bourne Stuntacular",
+    park: "Universal Studios",
+    area: "Hollywood",
+    completed: false
+  },
+  {
+    name: "Horror Make-Up Show",
+    park: "Universal Studios",
+    area: "Hollywood",
+    completed: false
+  },
 
   # New York
 
-  # Production Central
-
-  # San Francisco
+  {
+    name: "¡Vamos! – Báilalo",
+    park: "Universal Studios",
+    area: "New York",
+    completed: false
+  },
+  {
+    name: "The Blues Brothers",
+    park: "Universal Studios",
+    area: "New York",
+    completed: false
+  },
 
   # Diagon Alley
 
+  {
+    name: "The Tales of Beedle the Bard",
+    park: "Universal Studios",
+    area: "Diagon Alley",
+    completed: false
+  },
+  {
+    name: "Celestina Warbeck and the Banshees",
+    park: "Universal Studios",
+    area: "Diagon Alley",
+    completed: false
+  },
+
   # Woody Woodpecker's KidZone
 
-  # World Expo
+  {
+    name: "Animal Actors On Location!",
+    park: "Universal Studios",
+    area: "Woody Woodpecker's KidZone",
+    completed: false
+  },
 
   # Islands of Adventure
+
   # Jurassic Park
+  
   # Marvel Super Hero Island
   # Seuss Landing
   # Hogsmede

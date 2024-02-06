@@ -18,7 +18,13 @@ This is a working directory that contains a simple app to track the completion p
 
 ## TODO
 
-- [] Progress trackers
-- [] Sort by completed
-- [] Map
+- [] Progress trackers with data
+- [] Progress trackers pop out
+- [] AK Map
+- [] Epcot Map
+- [] HS Map
+- [] MK Map
+- [] USF Map
+- [] IOA Map
+- [] Map comletion
 = [] Completion effects

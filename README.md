@@ -18,14 +18,15 @@ This is a working directory that contains a simple app to track the completion p
 
 ## TODO
 -[] Shows Table and data
--[] user authentication
--[] user login
 -[] join table for user and attraction
 -[] join table for user and restaurant
 -[] join table for user and show
 -[] update crud actions to work with join table
 
 - [] FRONTEND *sparkle*
+
+-[] user login
+-[] user authentication simple
 
 should look something like this 
 

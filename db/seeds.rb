@@ -324,12 +324,6 @@ Attraction.create!([
     area: "World Nature",
     completed: false
   },
-  {
-    name: "Turtle Talk with Crush",
-    park: "Epcot",
-    area: "World Nature",
-    completed: false
-  },
 
   # World Showcase
 
@@ -380,12 +374,6 @@ Attraction.create!([
     area: "Adventureland",
     completed: false
   },
-  {
-    name: "Walt Enchanted Tiki Room",
-    park: "Magic Kingdom",
-    area: "Adventureland",
-    completed: false
-  },
 
   # Fantasyland
 
@@ -403,12 +391,6 @@ Attraction.create!([
   },
   {
     name: "Mad Tea Party",
-    park: "Magic Kingdom",
-    area: "Fantasyland",
-    completed: false
-  },
-  {
-    name: "Mickeys PhilharMagic",
     park: "Magic Kingdom",
     area: "Fantasyland",
     completed: false
@@ -492,12 +474,6 @@ Attraction.create!([
   # Liberty Square
 
   {
-    name: "The Hall of Presidents",
-    park: "Magic Kingdom",
-    area: "Liberty Square",
-    completed: false
-  },
-  {
     name: "Haunted Mansion",
     park: "Magic Kingdom",
     area: "Liberty Square",
@@ -558,12 +534,6 @@ Attraction.create!([
     completed: false
   },
   {
-    name: "Walt Carousel of Progress",
-    park: "Magic Kingdom",
-    area: "Tomorrowland",
-    completed: false
-  },
-  {
     name: "Tron Lightcycle / Run",
     park: "Magic Kingdom",
     area: "Tomorrowland",
@@ -580,40 +550,10 @@ Attraction.create!([
     area: "Animation Courtyard",
     completed: false
   },
-  {
-    name: "Disney Junior Play and Dance!",
-    park: "Hollywood Studios",
-    area: "Animation Courtyard",
-    completed: false
-  },
 
   # Echo Lake
   {
-    name: "For the First Time in Forever: A Frozen Sing-Along Celebration",
-    park: "Hollywood Studios",
-    area: "Echo Lake",
-    completed: false
-  },
-  {
-    name: "Indiana Jones Epic Stunt Spectacular!",
-    park: "Hollywood Studios",
-    area: "Echo Lake",
-    completed: false
-  },
-  {
-    name: "Indiana Jones Epic Stunt Spectacular!",
-    park: "Hollywood Studios",
-    area: "Echo Lake",
-    completed: false
-  },
-  {
     name: "Star Tours – The Adventures Continue",
-    park: "Hollywood Studios",
-    area: "Echo Lake",
-    completed: false
-  },
-  {
-    name: "Vacation Fun - An Original Animated Short with Mickey & Minnie",
     park: "Hollywood Studios",
     area: "Echo Lake",
     completed: false
@@ -623,15 +563,6 @@ Attraction.create!([
 
   {
     name: "Mickey & Minnie's Runaway Railway",
-    park: "Hollywood Studios",
-    area: "Hollywood Boulevard",
-    completed: false
-  },
-
-  # Muppet Courtyard
-
-  {
-    name: "Muppet*Vision 3D",
     park: "Hollywood Studios",
     area: "Hollywood Boulevard",
     completed: false
@@ -682,12 +613,6 @@ Attraction.create!([
     completed: false
   },
   {
-    name: "Lightning McQueen's Racing Academy",
-    park: "Hollywood Studios",
-    area: "Sunset Boulevard",
-    completed: false
-  },
-  {
     name: "Rock 'n' Roller Coaster Starring Aerosmith",
     park: "Hollywood Studios",
     area: "Sunset Boulevard",
@@ -704,12 +629,6 @@ Attraction.create!([
 
   # Africa
 
-  {
-    name: "Festival of the Lion King",
-    park: "Animal Kingdom",
-    area: "Africa",
-    completed: false
-  },
   {
     name: "Gorilla Falls Exploration Trail",
     park: "Animal Kingdom",
@@ -749,12 +668,6 @@ Attraction.create!([
     area: "Asia",
     completed: false
   },
-  {
-    name: "Feathered Friends in Flight!",
-    park: "Animal Kingdom",
-    area: "Asia",
-    completed: false
-  },
 
   # DinoLand U.S.A.
 
@@ -765,24 +678,9 @@ Attraction.create!([
     completed: false
   },
   {
-    name: "Finding Nemo: The Big Blue... and Beyond!",
-    park: "Animal Kingdom",
-    area: "DinoLand U.S.A.",
-    completed: false
-  },
-  {
     name: "TriceraTop Spin",
     park: "Animal Kingdom",
     area: "DinoLand U.S.A.",
-    completed: false
-  },
-
-  # Discovery Island
-
-  {
-    name: "It's Tough to be a Bug!",
-    park: "Animal Kingdom",
-    area: "Discovery Island",
     completed: false
   },
   
@@ -962,26 +860,183 @@ Show.create!([
 
 
   # Magic Kingdom
+
   # Adventureland
+
+  {
+    name: "Tiki Room",
+    park: "Magic Kingdom",
+    area: "Adventureland",
+    completed: false,
+  },
+
   # Fantasyland
+
+  {
+    name: "Mickey's PhilarMagic",
+    park: "Magic Kingdom",
+    area: "Fantasyland",
+    completed: false,
+  },
+
   # Frontierland
+
+  {
+    name: "Country Bear Jamboree",
+    park: "Magic Kingdom",
+    area: "Frontierland",
+    completed: false,
+  },
+
   # Liberty Square
+
+  {
+    name: "The Hall of Presidents",
+    park: "Magic Kingdom",
+    area: "Liberty Square",
+    completed: false,
+  },
+
   # Main Street, U.S.A.
+
+    {
+      name: "Happily Ever Afer",
+      park: "Magic Kingdom",
+      area: "Main Street, U.S.A.",
+      completed: false,
+    },
+
   # Tomorrowland
+
+  {
+    name: "Carousel of Progress",
+    park: "Magic Kingdom",
+    area: "Tomorrowland",
+    completed: false,
+  },
+
   # Hollywood Studios
+
   # Animation Courtyard
+
+  {
+    name: "Disney Junior Play and Dance!",
+    park: "Hollywood Studios",
+    area: "Animation Courtyard",
+    completed: false
+  },
+
   # Echo Lake
+
+  {
+    name: "For the First Time in Forever: A Frozen Sing-Along Celebration",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+  {
+    name: "Indiana Jones Epic Stunt Spectacular!",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+  {
+    name: "Vacation Fun",
+    park: "Hollywood Studios",
+    area: "Echo Lake",
+    completed: false
+  },
+
   # Hollywood Boulevard
+
+  {
+    name: "Wonderful World of Animation",
+    park: "Hollywood Studios",
+    area: "Hollywood Boulevard",
+    completed: false
+  },
+
   # Muppet Courtyard
+
+  {
+    name: "Muppet*Vision 3D",
+    park: "Hollywood Studios",
+    area: "Hollywood Boulevard",
+    completed: false
+  },
+
   # Toy Story Land
   # Galaxy's Edge
   # Sunset Boulevard
+
+  {
+    name: "Beauty and the Beast",
+    park: "Hollywood Studios",
+    area: "Sunset Boulevard",
+    completed: false,
+  },
+  {
+    name: "Fantasmic!",
+    park: "Hollywood Studios",
+    area: "Sunset Boulevard",
+    completed: false,
+  },
+  {
+    name: "Lightning McQueen's Racing Academy",
+    park: "Hollywood Studios",
+    area: "Sunset Boulevard",
+    completed: false
+  },
+  
   # Animal Kingdom
+
   # Africa
+
+  {
+    name: "Festival of the Lion King",
+    park: "Animal Kingdom",
+    area: "Africa",
+    completed: false
+  },
+  {
+    name: "The Animation Experience at Conservation Station",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+
   # Asia
+
+  {
+    name: "Feathered Friends in Flight!",
+    park: "Animal Kingdom",
+    area: "Asia",
+    completed: false
+  },
+
   # DinoLand U.S.A.
+
+  {
+    name: "Finding Nemo: The Big Blue... and Beyond!",
+    park: "Animal Kingdom",
+    area: "DinoLand U.S.A.",
+    completed: false
+  },
+
   # Discovery Island
-  # Pandora
+
+  {
+    name: "The Kingdom Takes Flight",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
+  {
+    name: "It's Tough to be a Bug!",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
 
 ])
 

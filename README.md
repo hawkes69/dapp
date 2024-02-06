@@ -26,5 +26,10 @@ This is a working directory that contains a simple app to track the completion p
 - [] MK Map
 - [] USF Map
 - [] IOA Map
-- [] Map comletion
-= [] Completion effects
+- [] Map completions
+- Animations
+- [] Completion effects
+- [] Pop out animation
+- [] Map completion animation
+- [] Silver completion images
+- [] Gold completion images

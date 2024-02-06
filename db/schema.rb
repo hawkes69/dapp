@@ -10,32 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_06_022659) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_02_001656) do
   create_table "attractions", force: :cascade do |t|
     t.string "name"
     t.string "park"
     t.string "area"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "completed_attractions", force: :cascade do |t|
-    t.boolean "completed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "completed_restaurants", force: :cascade do |t|
-    t.boolean "completed"
-    t.integer "user_id", null: false
-    t.integer "restaurant_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["restaurant_id"], name: "index_completed_restaurants_on_restaurant_id"
-    t.index ["user_id"], name: "index_completed_restaurants_on_user_id"
-  end
-
-  create_table "completed_shows", force: :cascade do |t|
     t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -45,6 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_022659) do
     t.string "name"
     t.string "park"
     t.string "area"
+    t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -53,18 +33,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_06_022659) do
     t.string "name"
     t.string "park"
     t.string "area"
+    t.boolean "completed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.string "username"
-    t.string "email"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "password"
-  end
-
-  add_foreign_key "completed_restaurants", "restaurants"
-  add_foreign_key "completed_restaurants", "users"
 end

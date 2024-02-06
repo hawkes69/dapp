@@ -18,8 +18,25 @@ This is a working directory that contains a simple app to track the completion p
 
 ## TODO
 -[] Shows Table and data
--[] Restaurants Table and data
--[] users table
 -[] user authentication
 -[] user login
--[] move completion tracking to user table
+-[] join table for user and attraction
+-[] join table for user and restaurant
+-[] join table for user and show
+-[] update crud actions to work with join table
+
+- [] FRONTEND *sparkle*
+
+should look something like this 
+
+```ruby
+# Example usage
+user = User.find(1)
+attraction = Attraction.find(1)
+
+# Add attraction to user
+user.attractions << attraction
+
+# note this won't update the full db just that users join table. So if we add some attractions it will update our table but no one elses. For this use case I think that's fine.
+# Just make sure my seed file is good
+```

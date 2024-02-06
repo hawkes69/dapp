@@ -265,12 +265,6 @@ Attraction.create!([
   # World Celebration
 
   {
-    name: "Disney and Pixar Short Film Festival",
-    park: "Epcot",
-    area: "World Celebration",
-    completed: false
-  },
-  {
     name: "Journey Into Imagination With Figment",
     park: "Epcot",
     area: "World Celebration",
@@ -307,12 +301,6 @@ Attraction.create!([
   # World Nature
 
   {
-    name: "Awesome Planet",
-    park: "Epcot",
-    area: "World Nature",
-    completed: false
-  },
-  {
     name: "Living with the Land",
     park: "Epcot",
     area: "World Nature",
@@ -345,12 +333,6 @@ Attraction.create!([
 
   # World Showcase
 
-  {
-    name: "Canada: Far and Wide",
-    park: "Epcot",
-    area: "World Showcase",
-    completed: false
-  },
   {
     name: "Frozen Ever After",
     park: "Epcot",
@@ -880,16 +862,105 @@ Show.create!([
   # Islands of Adventure
 
   # Jurassic Park
-  
-  # Marvel Super Hero Island
+
+  {
+    name: "Meet Raptors Maybe",
+    park: "Universal Studios",
+    area: "Jurassic Park",
+    completed: false
+  },
+
   # Seuss Landing
+
+  {
+    name: "Oh! The Stories You'll Hear!",
+    park: "Universal Studios",
+    area: "Seuss Landing",
+    completed: false
+  },
+
   # Hogsmede
-  # Toon Lagoon
+
+  {
+    name: "Frog Choir",
+    park: "Universal Studios",
+    area: "Hogsmede",
+    completed: false
+  },
+  {
+    name: "Triwizard Spirit Rally",
+    park: "Universal Studios",
+    area: "Hogsmede",
+    completed: false
+  },
+
   # EPCOT
-  # World Celebration
-  # World Discovery 
-  # World Nature
+
   # World Showcase
+
+  {
+    name: "America Pavilion Shows",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false,
+  },
+  {
+    name: "Luminous The Symphony of Us",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false,
+  },
+  {
+    name: "Matsuriza",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false,
+  },
+  {
+    name: "Beauty and the Beast Sing-Along",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false,
+  },
+  {
+    name: "Canada: Far and Wide",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false
+  },
+  {
+    name: "Impressions de France",
+    park: "Epcot",
+    area: "World Showcase",
+    completed: false
+  },
+
+  # World Nature
+
+  {
+    name: "Awesome Planet",
+    park: "Epcot",
+    area: "World Nature",
+    completed: false,
+  },
+  {
+    name: "Turtle Talk With Crush",
+    park: "Epcot",
+    area: "World Nature",
+    completed: false,
+  },
+
+  # World Celebration
+
+  {
+    name: "Disney and Pixar Short Film Festival",
+    park: "Epcot",
+    area: "World Celebration",
+    completed: false
+  },
+
+
+
   # Magic Kingdom
   # Adventureland
   # Fantasyland

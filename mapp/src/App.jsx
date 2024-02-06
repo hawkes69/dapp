@@ -7,7 +7,7 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <div className="pt-16">
+        <div style={{paddingTop: "60px"}}>
           <AppRoutes />
         </div>
       </div>

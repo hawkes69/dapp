@@ -37,8 +37,6 @@ function List({ type, data, isLoading }) {
             <TableRow>
               <TableCell>Completed</TableCell>
               <TableCell>{type}</TableCell>
-              <TableCell>Park</TableCell>
-              <TableCell>Area</TableCell>
               <TableCell>
                 <Link to={`/${type.toLowerCase()}/new`}>
                   <Add />

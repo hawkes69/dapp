@@ -7,7 +7,9 @@ function App() {
     <Router>
       <div>
         <Navbar />
-        <AppRoutes />
+        <div className="pt-16">
+          <AppRoutes />
+        </div>
       </div>
     </Router>
   );

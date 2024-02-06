@@ -34,14 +34,12 @@ function Edit({ type }) {
 
   let mutationVariables;
   
-  // This is bad practice because hooks shouldn't be called like this. However it does work. SO may help but for now I'm leaving as is. 
-
   const [addAttractionTrigger] = useAddAttractionMutation();
   const [updateAttractionTrigger] = useUpdateAttractionMutation();
   const [removeAttractionTrigger] = useRemoveAttractionMutation();
   const fetchAttractionResult = useFetchAttractionQuery(
     id,
-    { skip: !["restaurants", "shows"].includes(type) } // "attractions"
+    { skip: ["restaurants", "shows"].includes(type) } // "attractions"
   );
   
   const [addRestaurantTrigger] = useAddRestaurantMutation();
@@ -49,7 +47,7 @@ function Edit({ type }) {
   const [removeRestaurantTrigger] = useRemoveRestaurantMutation();
   const fetchRestaurantResult = useFetchRestaurantQuery(
     id,
-    { skip: !["attractions", "shows"].includes(type) } // "restaurants"
+    { skip: ["attractions", "shows"].includes(type) } // "restaurants"
   );
   
   const [addShowTrigger] = useAddShowMutation();
@@ -57,7 +55,7 @@ function Edit({ type }) {
   const [removeShowTrigger] = useRemoveShowMutation();
   const fetchShowResult = useFetchShowQuery(
     id,
-    { skip: !["attractions", "restaurants"].includes(type) } // "shows"
+    { skip: ["attractions", "restaurants"].includes(type) } // "shows"
   );
   
   if (type === "attractions") {

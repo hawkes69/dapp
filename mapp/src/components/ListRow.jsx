@@ -46,8 +46,6 @@ function ListRow({ row, type }) {
       <TableCell component="th" scope="row">
         {row.name}
       </TableCell>
-      <TableCell>{row.park}</TableCell>
-      <TableCell>{row.area}</TableCell>
       <TableCell>
         <Link to={`/${type.toLowerCase()}/${row.id}/edit`}>
           <Edit sx={{ fontSize: 18 }} />

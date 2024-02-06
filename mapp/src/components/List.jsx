@@ -25,7 +25,7 @@ function List({ type, data, isLoading }) {
     <div className="flex flex-col gap-4 m-4">
       <input
         type="text"
-        placeholder="Filter..."
+        placeholder="Search by name, park, area, or true/false for completed"
         className="p-2 border-2 border-gray-200 rounded-md"
         style={{ width: "-webkit-fill-available" }}
         value={query}
@@ -50,7 +50,8 @@ function List({ type, data, isLoading }) {
             {data.filter((row) =>
               row.name.toLowerCase().includes(query) ||
               row.park.toLowerCase().includes(query) ||
-              row.area.toLowerCase().includes(query)
+              row.area.toLowerCase().includes(query) ||
+              row.completed.toString().toLowerCase().includes(query)
               ).map((row) => (
               <ListRow key={row.id} row={row} type={type}/>
             ))}

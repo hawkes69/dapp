@@ -36,29 +36,53 @@ function Edit({ type }) {
   
   // This is bad practice because hooks shouldn't be called like this. However it does work. SO may help but for now I'm leaving as is. 
 
+  const [addAttractionTrigger] = useAddAttractionMutation();
+  const [updateAttractionTrigger] = useUpdateAttractionMutation();
+  const [removeAttractionTrigger] = useRemoveAttractionMutation();
+  const fetchAttractionResult = useFetchAttractionQuery(
+    id,
+    { skip: !["restaurants", "shows"].includes(type) } // "attractions"
+  );
+  
+  const [addRestaurantTrigger] = useAddRestaurantMutation();
+  const [updateRestaurantTrigger] = useUpdateRestaurantMutation();
+  const [removeRestaurantTrigger] = useRemoveRestaurantMutation();
+  const fetchRestaurantResult = useFetchRestaurantQuery(
+    id,
+    { skip: !["attractions", "shows"].includes(type) } // "restaurants"
+  );
+  
+  const [addShowTrigger] = useAddShowMutation();
+  const [updateShowTrigger] = useUpdateShowMutation();
+  const [removeShowTrigger] = useRemoveShowMutation();
+  const fetchShowResult = useFetchShowQuery(
+    id,
+    { skip: !["attractions", "restaurants"].includes(type) } // "shows"
+  );
+  
   if (type === "attractions") {
     mutationVariables = {
-      addMutation: useAddAttractionMutation()[0],
-      updateMutation: useUpdateAttractionMutation()[0],
-      removeMutation: useRemoveAttractionMutation()[0],
-      fetchData: useFetchAttractionQuery(id),
+      addMutation: addAttractionTrigger,
+      updateMutation: updateAttractionTrigger,
+      removeMutation: removeAttractionTrigger,
+      fetchData: fetchAttractionResult,
     };
   } else if (type === "restaurants") {
     mutationVariables = {
-      addMutation: useAddRestaurantMutation()[0],
-      updateMutation: useUpdateRestaurantMutation()[0],
-      removeMutation: useRemoveRestaurantMutation()[0],
-      fetchData: useFetchRestaurantQuery(id),
+      addMutation: addRestaurantTrigger,
+      updateMutation: updateRestaurantTrigger,
+      removeMutation: removeRestaurantTrigger,
+      fetchData: fetchRestaurantResult,
     };
   } else if (type === "shows") {
     mutationVariables = {
-      addMutation: useAddShowMutation()[0],
-      updateMutation: useUpdateShowMutation()[0],
-      removeMutation: useRemoveShowMutation()[0],
-      fetchData: useFetchShowQuery(id),
+      addMutation: addShowTrigger,
+      updateMutation: updateShowTrigger,
+      removeMutation: removeShowTrigger,
+      fetchData: fetchShowResult,
     };
   }
-  
+    
   const {
     addMutation,
     updateMutation,

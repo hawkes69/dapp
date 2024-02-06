@@ -4,6 +4,9 @@ import IMAGES from "~/images/Images";
 function CompletionIndicator({ name }) {
   const color = name + "Color";
   const grayscale = name + "Grayscale";
+  //     max-height: 54px;
+  //  overflow: hidden;
+  // use this to make overlay image cut off
   return (
     <div className="w-32 h-32">
       <img className="" src={IMAGES[grayscale]} />

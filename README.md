@@ -1,20 +1,15 @@
 # README
 
-This is a working directory that contains a simple app to track the completion percentage of various amusement parks in Orlando. My wife and I would like to "100%" (complete every attraction and eat at every restaurant) each of the parks and want a simple web app to keep track of our progress. This will be a mobile-first app and I don't plan to have a working desktop implementation as we will almost exclusively access this from our phones while in the parks. 
+This is a working directory that contains a simple app to track the completion percentage of various amusement parks in Orlando. My wife and I would like to "100%" (complete every attraction, watch every show, and eat at every restaurant) each of the parks and want a simple web app to keep track of our progress. This will be a mobile-first app and I don't plan to have a working desktop implementation as we will almost exclusively access this from our phones while in the parks.
 
-## Things that need to be implemented. 
+## Tech Stack
 
-* Ruby Backend
-* User Authentication
-* React front end
-* Rails api
-* Host app
+- Vite React frontend
+- Ruby on Rails Backend
 
-## Feature wishlist
+## Demo Site
 
-* Progress bar
-* Date night generator (uncompleted ride, restaurant, and show)
-* Fog of war map to demonstrate progression
+I have not yet hosted a demo site. I will update this section when I have a demo site available.
 
 ## TODO
 
@@ -27,6 +22,7 @@ This is a working directory that contains a simple app to track the completion p
 - [] USF Map
 - [] IOA Map
 - [] Map completions
+- [] Date night generator
 - Animations
 - [] Completion effects
 - [] Pop out animation

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CompletionIndicator from "./CompletionIndicator";
 
 import { 
@@ -7,7 +6,7 @@ import {
   useFetchShowsQuery,
 } from "../../store/apis/dappApi";
 
-function calculateCompletionPercentage(list, parkName) {
+function calculateCompletion(list, parkName) {
   const parkListTotal = list.filter(activity => activity.park === parkName).length;
   const parkListCompleted = list.filter(activity => activity.park === parkName && activity.completed).length;
 
@@ -17,10 +16,6 @@ function calculateCompletionPercentage(list, parkName) {
   else {
     return (100 - (parkListCompleted / parkListTotal) * 100);
   }
-}
-
-function activityTrackerType(parkName) {
-  
 }
 
 function Completions() {
@@ -33,12 +28,42 @@ function Completions() {
   ) : (
     <div className="flex justify-center items-center m-12">
       <div className="flex flex-row justify-center flex-wrap gap-12">
-        <CompletionIndicator name="animalKingdom" percentComplete={calculateCompletionPercentage(showsData, "Animal Kingdom")} />
-        <CompletionIndicator name="epcot" percentComplete={calculateCompletionPercentage(showsData, "Epcot")} />
-        <CompletionIndicator name="magicKingdom" percentComplete={calculateCompletionPercentage(showsData, "Magic Kingdom")} />
-        <CompletionIndicator name="hollywoodStudios" percentComplete={calculateCompletionPercentage(showsData, "Hollywood Studios")} />
-        <CompletionIndicator name="islandsOfAdventure" percentComplete={calculateCompletionPercentage(showsData, "Islands Of Adventure")} />
-        <CompletionIndicator name="universalStudios" percentComplete={calculateCompletionPercentage(showsData, "Universal Studios")} />
+        <CompletionIndicator
+          name="animalKingdom"
+          attractionsCompletion={calculateCompletion(attractionsData, "Animal Kingdom")}
+          showsCompletion={calculateCompletion(showsData, "Animal Kingdom")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Animal Kingdom")}
+        />
+        <CompletionIndicator
+          name="epcot"
+          attractionsCompletion={calculateCompletion(attractionsData, "Epcot")}
+          showsCompletion={calculateCompletion(showsData, "Epcot")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Epcot")}
+        />
+        <CompletionIndicator
+          name="hollywoodStudios"
+          attractionsCompletion={calculateCompletion(attractionsData, "Hollywood Studios")}
+          showsCompletion={calculateCompletion(showsData, "Hollywood Studios")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Hollywood Studios")}
+        />
+        <CompletionIndicator
+          name="magicKingdom"
+          attractionsCompletion={calculateCompletion(attractionsData, "Magic Kingdom")}
+          showsCompletion={calculateCompletion(showsData, "Magic Kingdom")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Magic Kingdom")}
+        />
+        <CompletionIndicator
+          name="islandsOfAdventure"
+          attractionsCompletion={calculateCompletion(attractionsData, "Islands of Adventure")}
+          showsCompletion={calculateCompletion(showsData, "Islands of Adventure")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Islands of Adventure")}
+        />
+        <CompletionIndicator
+          name="universalStudios"
+          attractionsCompletion={calculateCompletion(attractionsData, "Universal Studios")}
+          showsCompletion={calculateCompletion(showsData, "Universal Studios")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Universal Studios")}
+        />
       </div>
     </div>
   );

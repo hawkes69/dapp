@@ -13,8 +13,6 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- [] Progress trackers with data
-- [] Progress trackers pop out
 - [] AK Map
 - [] Epcot Map
 - [] HS Map

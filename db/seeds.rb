@@ -152,30 +152,30 @@ Attraction.create!([
     completed: false
   },
 
-  # Marvel Super Hero Island
+  # Superhero Island
 
   {
     name: "Doctor Doom's Fearfall",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
   {
     name: "Storm Force Accelatron",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
   {
     name: "The Amazing Adventures of Spider-Man",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
   {
     name: "The Incredible Hulk Coaster",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
 
@@ -1169,24 +1169,24 @@ Restaurant.create!([
     completed: false
   },
 
-  # Marvel Super Hero Island
+  # Superhero Island
 
   {
     name: "Marvel Character Dinner",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
   {
     name: "Cafe 4",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
   {
     name: "Captain America Diner",
     park: "Islands of Adventure",
-    area: "Marvel Super Hero Island",
+    area: "Superhero Island",
     completed: false
   },
 

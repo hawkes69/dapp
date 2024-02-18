@@ -26,7 +26,7 @@ function Completions() {
   return showsLoading || restaurantsLoading || attractionsLoading ? (
     <div className="flex items-center justify-center h-screen">Loading...</div>
   ) : (
-    <div className="flex justify-center items-center m-12">
+    <div className="flex justify-center items-center m-8">
       <div className="flex flex-row justify-center flex-wrap gap-12">
         <CompletionIndicator
           name="animalKingdom"

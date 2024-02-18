@@ -13,8 +13,7 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- [] render images, mapping from passed props to correct images
-- [] Map completions
+- [] Map uses actual data
 - [] Date night generator
 - Animations
 - [] Completion effects

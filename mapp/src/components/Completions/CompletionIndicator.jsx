@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import IMAGES from "~/images/Images";
 
-import { Modal, Box } from '@mui/material';
+import { Modal, Box, Button } from '@mui/material';
+
+import IMAGES from "~/images/Images";
 
 function humanReadable(camelCase) {
   return camelCase.replace(/([A-Z])/g, ' $1')
@@ -18,6 +20,8 @@ function CompletionIndicator({ name, attractionsCompletion, showsCompletion, res
   const grayscale = name + "Grayscale";
   const bronze = name + "Bronze";
   const gold = name + "Gold";
+
+  console.log(name)
 
   const style = {
     position: 'absolute',
@@ -59,16 +63,20 @@ function CompletionIndicator({ name, attractionsCompletion, showsCompletion, res
         }
       </div>
       <Modal open={open} onClose={handleClose}>
-          <Box sx={style}>
-            <h2 className="font-bold text-xl text-center mb-2">{humanReadable(name)}</h2>
-            <hr className="border-black mb-4"/>
-            <ul>
-              <li>Attractions: {Math.round(100 - attractionsCompletion)}%</li>
-              <li>Shows: {Math.round(100 - showsCompletion)}%</li>
-              <li>Restaurants: {Math.round(100 - restaurantsCompletion)}%</li>
-            </ul>
-          </Box>
-        </Modal>
+        <Box sx={style} className="flex flex-col gap-4 min-w-72">
+          <h2 className="font-bold text-xl text-center">{humanReadable(name)}</h2>
+          <hr className="border-black"/>
+          <ul>
+            <li>Attractions: {Math.round(100 - attractionsCompletion)}%</li>
+            <li>Shows: {Math.round(100 - showsCompletion)}%</li>
+            <li>Restaurants: {Math.round(100 - restaurantsCompletion)}%</li>
+          </ul>
+          <hr className="border-black"/>
+          <Button variant="contained">
+            <Link to={`/map/${name}`}>{humanReadable(name)}</Link>
+          </Button>
+        </Box>
+      </Modal>
     </div>
   );
 }

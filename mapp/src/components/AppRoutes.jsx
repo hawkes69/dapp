@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import Completions from "./completions/Completions.jsx";
-import Map from "./maps/Map.jsx";
+import Map from "./Map.jsx";
 import Edit from "./Edit.jsx";
 import Attractions from "./pages/Attractions.jsx";
 import Restaurants from "./pages/Restaurants.jsx";
@@ -19,7 +19,12 @@ function AppRoutes() {
       <Route exact path="/restaurants" element={<Restaurants />} />
       <Route exact path="/restaurants/:id/edit" element={<Edit type="restaurants" />} />
       <Route exact path="/restaurants/new" element={<Edit type="restaurants"/>} />
-      <Route exact path="/map" element={<Map />} />
+      <Route exact path="/map/animalKingdom" element={<Map park="Animal Kingdom" />} />
+      <Route exact path="/map/epcot" element={<Map park="Epcot" />} />
+      <Route exact path="/map/magicKingdom" element={<Map park="Magic Kingdom" />} />
+      <Route exact path="/map/hollywoodStudios" element={<Map park="Hollywood Studios" />} />
+      <Route exact path="/map/universalStudios" element={<Map park="Universal Studios" />} />
+      <Route exact path="/map/islandsOfAdventure" element={<Map park="Islands Of Adventure" />} />
     </Routes>
   );
 }

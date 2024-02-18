@@ -10,7 +10,6 @@ function Navbar() {
       <Link to="/attractions">Attractions</Link>
       <Link to="/shows">Shows</Link>
       <Link to="/restaurants">Restaurants</Link>
-      <Link to="/map">Map</Link>
     </div>
   );
 }

@@ -21,8 +21,6 @@ function CompletionIndicator({ name, attractionsCompletion, showsCompletion, res
   const bronze = name + "Bronze";
   const gold = name + "Gold";
 
-  console.log(name)
-
   const style = {
     position: 'absolute',
     top: '50%',

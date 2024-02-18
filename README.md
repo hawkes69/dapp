@@ -21,3 +21,5 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 - [] Map completion animation
 - [] Silver completion images
 - [] Gold completion images
+
+- [] move completion logic in map to backend

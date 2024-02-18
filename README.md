@@ -13,12 +13,7 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- [] AK Map
-- [] Epcot Map
-- [] HS Map
-- [] MK Map
-- [] USF Map
-- [] IOA Map
+- [] render images, mapping from passed props to correct images
 - [] Map completions
 - [] Date night generator
 - Animations

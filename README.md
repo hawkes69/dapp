@@ -13,7 +13,6 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- [] loading screens
 - [] Date night generator
 - Animations
 - [] Completion effects
@@ -23,3 +22,5 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 - [] Gold completion images
 
 - [] move completion logic in map to backend
+
+- [] HOST!!!!

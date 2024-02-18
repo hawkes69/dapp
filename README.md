@@ -13,7 +13,7 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- [] Map uses actual data
+- [] loading screens
 - [] Date night generator
 - Animations
 - [] Completion effects

@@ -18,6 +18,9 @@ function Map({ park }) {
   const { data: shows, isLoading: showsLoading } = useFetchShowsQuery();
   const { data: restaurants, isLoading: restaurantsLoading } = useFetchRestaurantsQuery();
 
+  console.log(park)
+  console.log(PARK_AREAS)
+
   const totalCompletion = () => {
     const attractionsTotal = attractions.filter(attraction => attraction.completed && attraction.park === park);
     const showsTotal = shows.filter(show => show.completed && show.park === park);

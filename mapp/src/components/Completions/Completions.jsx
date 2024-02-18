@@ -54,9 +54,9 @@ function Completions() {
         />
         <CompletionIndicator
           name="islandsOfAdventure"
-          attractionsCompletion={calculateCompletion(attractionsData, "Islands of Adventure")}
-          showsCompletion={calculateCompletion(showsData, "Islands of Adventure")}
-          restaurantsCompletion={calculateCompletion(restaurantsData, "Islands of Adventure")}
+          attractionsCompletion={calculateCompletion(attractionsData, "Islands Of Adventure")}
+          showsCompletion={calculateCompletion(showsData, "Islands Of Adventure")}
+          restaurantsCompletion={calculateCompletion(restaurantsData, "Islands Of Adventure")}
         />
         <CompletionIndicator
           name="universalStudios"

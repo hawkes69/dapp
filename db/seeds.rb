@@ -105,49 +105,49 @@ Attraction.create!([
     completed: false
   },
 
-  # Islands of Adventure
+  # Islands Of Adventure
 
   # Jurassic Park
 
   {
     name: "Camp Jurassic",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic Park Discovery Center",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic Park River Adventure",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Jurassic World VelociCoaster",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Pteranodon Flyers",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Raptor Encounter",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
   {
     name: "Skull Island: Reign of Kong",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
@@ -156,25 +156,25 @@ Attraction.create!([
 
   {
     name: "Doctor Doom's Fearfall",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
   {
     name: "Storm Force Accelatron",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
   {
     name: "The Amazing Adventures of Spider-Man",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
   {
     name: "The Incredible Hulk Coaster",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
@@ -183,31 +183,31 @@ Attraction.create!([
 
   {
     name: "Caro-Seuss-el",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
   {
     name: "If I Ran the Zoo",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
   {
     name: "One Fish, Two Fish, Red Fish, Blue Fish",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
   {
     name: "The Cat in the Hat",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
   {
     name: "The High in the Sky Seuss Trolley Train Ride!",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
@@ -216,25 +216,25 @@ Attraction.create!([
 
   {
     name: "Flight of the Hippogriff",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
   {
     name: "Hagrid's Magical Creatures Motorbike Adventure",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
   {
     name: "Harry Potter and the Forbidden Journey",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
   {
     name: "Hogwarts Express - Hogsmeade Station",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
@@ -243,19 +243,19 @@ Attraction.create!([
 
   {
     name: "Dudley Do-Right's Ripsaw Falls",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Me Ship, The Olive",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Popeye & Bluto's Bilge-Rat Barges",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },
@@ -757,7 +757,7 @@ Show.create!([
     completed: false
   },
 
-  # Islands of Adventure
+  # Islands Of Adventure
 
   # Jurassic Park
 
@@ -1158,13 +1158,13 @@ Restaurant.create!([
     completed: false
   },
 
-  # Islands of Adventure
+  # Islands Of Adventure
 
   # Jurassic Park
 
   {
     name: "Pizza Predattoria",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Jurassic Park",
     completed: false
   },
@@ -1173,19 +1173,19 @@ Restaurant.create!([
 
   {
     name: "Marvel Character Dinner",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
   {
     name: "Cafe 4",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
   {
     name: "Captain America Diner",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Superhero Island",
     completed: false
   },
@@ -1194,13 +1194,13 @@ Restaurant.create!([
 
   {
     name: "Confisco Grille",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Port of Entry",
     completed: false
   },
   {
     name: "Croissant Moon Bakery",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Port of Entry",
     completed: false
   },
@@ -1208,13 +1208,13 @@ Restaurant.create!([
   # Seuss Landing
   {
     name: "Green Eggs and Ham Cafe",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
   {
     name: "Circus McGurkus Cafe Stoo-pendous",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Seuss Landing",
     completed: false
   },
@@ -1223,19 +1223,19 @@ Restaurant.create!([
 
   {
     name: "Mythos Restaurant",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Lost Continent",
     completed: false
   },
   {
     name: "Doc Sugrue's Desert Kebab House",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Lost Continent",
     completed: false
   },
   {
     name: "Fire Eater's Grill",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Lost Continent",
     completed: false
   },
@@ -1244,13 +1244,13 @@ Restaurant.create!([
 
   {
     name: "Three Broomsticks",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
   {
     name: "Hogs Head",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Hogsmede",
     completed: false
   },
@@ -1259,19 +1259,19 @@ Restaurant.create!([
 
   {
     name: "Wimpy's",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Comic Strip Cafe",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },
   {
     name: "Blondie's",
-    park: "Islands of Adventure",
+    park: "Islands Of Adventure",
     area: "Toon Lagoon",
     completed: false
   },

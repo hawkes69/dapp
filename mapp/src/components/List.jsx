@@ -46,10 +46,10 @@ function List({ type, data, isLoading }) {
           </TableHead>
           <TableBody>
             {data.filter((row) =>
-              row.name.toLowerCase().includes(query) ||
-              row.park.toLowerCase().includes(query) ||
-              row.area.toLowerCase().includes(query) ||
-              row.completed.toString().toLowerCase().includes(query)
+              row.name.toLowerCase().includes(query.toLowerCase()) ||
+              row.park.toLowerCase().includes(query.toLowerCase()) ||
+              row.area.toLowerCase().includes(query.toLowerCase()) ||
+              row.completed.toString().toLowerCase().includes(query.toLowerCase())
               ).map((row) => (
               <ListRow key={row.id} row={row} type={type}/>
             ))}

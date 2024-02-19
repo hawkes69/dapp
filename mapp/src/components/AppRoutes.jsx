@@ -5,6 +5,7 @@ import Edit from "./Edit.jsx";
 import Attractions from "./pages/Attractions.jsx";
 import Restaurants from "./pages/Restaurants.jsx";
 import Shows from "./pages/Shows.jsx";
+import DateGenerator from "./pages/DateGenerator.jsx";
 
 function AppRoutes() {
   return (
@@ -17,7 +18,7 @@ function AppRoutes() {
       <Route exact path="/shows/:id/edit" element={<Edit type="shows" />} />
       <Route exact path="/shows/new" element={<Edit type="shows"/>} />
       <Route exact path="/restaurants" element={<Restaurants />} />
-      <Route exact path="/restaurants/:id/edit" element={<Edit type="restaurants" />} />
+      <Route exact path="/restaurants/:id/edit" element={<Edit type="restaurants" />} />W
       <Route exact path="/restaurants/new" element={<Edit type="restaurants"/>} />
       <Route exact path="/map/animalKingdom" element={<Map park="Animal Kingdom" />} />
       <Route exact path="/map/epcot" element={<Map park="Epcot" />} />
@@ -25,6 +26,7 @@ function AppRoutes() {
       <Route exact path="/map/hollywoodStudios" element={<Map park="Hollywood Studios" />} />
       <Route exact path="/map/universalStudios" element={<Map park="Universal Studios" />} />
       <Route exact path="/map/islandsOfAdventure" element={<Map park="Islands Of Adventure" />} />
+      <Route exact path="/dateNight" element={<DateGenerator />} />
     </Routes>
   );
 }

@@ -13,12 +13,9 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
+- move completion logic in map to backend
 - Date night generator
-- Animations
 - Completion effects
 - Pop out animation
 - Map completion animation
-- Silver completion images
-- Gold completion images
-- move completion logic in map to backend
 - HOST!!!!

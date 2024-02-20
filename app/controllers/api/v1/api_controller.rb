@@ -8,6 +8,17 @@ class Api::V1::ApiController < ApplicationController
     "Animal Kingdom" => ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
   }
 
+  def date_generator
+    park = available_parks.sample
+
+    render json: {
+      park: park,
+      attraction: random_experience(Attraction, park),
+      show: random_experience(Show, park),
+      restaurant: random_experience(Restaurant, park),
+    }
+  end
+
   def completed
     park = params[:park]
 
@@ -24,6 +35,17 @@ class Api::V1::ApiController < ApplicationController
   end
   
   private
+
+  def available_parks
+    parks = PARK_AREAS.keys
+    available_parks = parks
+    parks.map do |park|
+      available_parks.delete(park) if experience_type_completed?(Attraction, park) ||
+        experience_type_completed?(Show, park) ||
+        experience_type_completed?(Restaurant, park)
+    end
+    available_parks
+  end
   
   def completion_percentage(park, area)
     if park.present?
@@ -45,6 +67,10 @@ class Api::V1::ApiController < ApplicationController
     Show.where(park: park, completed: true).count +
     Restaurant.where(park: park, completed: true).count
   end
+
+  def experience_type_completed?(experience_type, park)
+    return true if experience_type.where(park: park, completed: false).count == 0
+  end
   
   def total_experiences_by_park(park)
     Attraction.where(park: park).count +
@@ -62,5 +88,9 @@ class Api::V1::ApiController < ApplicationController
     Attraction.where(area: area).count +
     Show.where(area: area).count +
     Restaurant.where(area: area).count
+  end
+
+  def random_experience(experience_type, park)
+    experience_type.where(park: park, completed: false).sample
   end
 end

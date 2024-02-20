@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/completed', to: 'api#completed'
+      get '/date_generator', to: 'api#date_generator'
 
       resources :attractions
       resources :restaurants

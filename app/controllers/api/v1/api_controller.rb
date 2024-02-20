@@ -37,14 +37,11 @@ class Api::V1::ApiController < ApplicationController
   private
 
   def available_parks
-    parks = PARK_AREAS.keys
-    available_parks = parks
-    parks.map do |park|
-      available_parks.delete(park) if experience_type_completed?(Attraction, park) ||
+    available_parks = PARK_AREAS.keys.reject do |park|
+      experience_type_completed?(Attraction, park) ||
         experience_type_completed?(Show, park) ||
         experience_type_completed?(Restaurant, park)
     end
-    available_parks
   end
   
   def completion_percentage(park, area)

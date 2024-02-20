@@ -30,4 +30,5 @@ export {
   useRemoveShowMutation,
   useFetchShowQuery,
   useFetchCompletedPercentageQuery,
+  useFetchDateGeneratorQuery,
 } from "./apis/dappApi";

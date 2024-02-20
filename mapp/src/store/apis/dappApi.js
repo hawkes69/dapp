@@ -173,6 +173,14 @@ const dappApi = createApi({
           };
         },
       }),
+      fetchDateGenerator: builder.query({
+        query: () => {
+          return {
+            url: "date_generator",
+            method: "GET"
+          }
+        }
+      })
     };
   },
 });
@@ -193,7 +201,8 @@ export const {
   useRemoveShowMutation,
   useFetchShowQuery,
   useUpdateShowMutation,
-  useFetchCompletedPercentageQuery
+  useFetchCompletedPercentageQuery,
+  useFetchDateGeneratorQuery,
 } = dappApi;
 
 export { dappApi };

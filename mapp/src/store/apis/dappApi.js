@@ -146,7 +146,7 @@ const dappApi = createApi({
         },
       }),
       updateShow: builder.mutation({
-        invalidatesTags: ["Shows", "Show"],
+        invalidatesTags: ["Shows", "Show", "CompletedPercentage"],
         query: (show) => {
           return {
             url: `/shows/${show.id}`,
@@ -161,6 +161,15 @@ const dappApi = createApi({
           return {
             url: `/shows/${id}`,
             method: "DELETE",
+          };
+        },
+      }),
+      fetchCompletedPercentage: builder.query({
+        providesTags: ["CompletedPercentage"],
+        query: (query) => {
+          return {
+            url: `/completed?${query}`,
+            method: "GET",
           };
         },
       }),
@@ -184,6 +193,7 @@ export const {
   useRemoveShowMutation,
   useFetchShowQuery,
   useUpdateShowMutation,
+  useFetchCompletedPercentageQuery
 } = dappApi;
 
 export { dappApi };

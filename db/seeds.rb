@@ -961,7 +961,7 @@ Show.create!([
   {
     name: "Muppet*Vision 3D",
     park: "Hollywood Studios",
-    area: "Hollywood Boulevard",
+    area: "Muppet Courtyard",
     completed: false
   },
 
@@ -1774,6 +1774,12 @@ Restaurant.create!([
     area: "Discovery Island",
     completed: false
   },
+  {
+    name: "Rainforest Cafe",
+    park: "Animal Kingdom",
+    area: "Discovery Island",
+    completed: false
+  },
 
   # Pandora
 
@@ -1781,15 +1787,6 @@ Restaurant.create!([
     name: "Satu’li Canteen",
     park: "Animal Kingdom",
     area: "Pandora",
-    completed: false
-  },
-
-  # Entrance
-
-  {
-    name: "Rainforest Cafe",
-    park: "Animal Kingdom",
-    area: "Entrance",
     completed: false
   },
 ])

@@ -13,9 +13,9 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- move completion logic in map to backend
 - Date night generator
 - Completion effects
 - Pop out animation
 - Map completion animation
 - HOST!!!!
+- consolidate constants files in front and back end to just back end

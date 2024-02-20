@@ -13,7 +13,6 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- Date night generator
 - Completion effects
 - Pop out animation
 - Map completion animation

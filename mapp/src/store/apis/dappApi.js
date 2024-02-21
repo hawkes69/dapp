@@ -42,7 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
-        invalidatesTags: ["Attractions", "Attraction"],
+        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -94,7 +94,7 @@ const dappApi = createApi({
         },
       }),
       updateRestaurant: builder.mutation({
-        invalidatesTags: ["Restaurants", "Restaurant"],
+        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage"],
         query: (restaurant) => {
           return {
             url: `/restaurants/${restaurant.id}`,

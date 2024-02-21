@@ -14,10 +14,6 @@ function toCamelCase(text) {
 function Map({ park }) {
   const { data, isLoading } = useFetchCompletedPercentageQuery(`park=${park}`);
 
-  if(!isLoading) {
-    console.log(park)
-  }
-
   return isLoading ? (
     <div className="flex items-center justify-center h-screen">Loading...</div>
   ) : (
@@ -27,6 +23,7 @@ function Map({ park }) {
       {data.park_completion != 100 ? (
         <>
           {data.area_percentages.map(([area, percentage], index) => {
+            console.log(area, percentage)
             return (
               percentage == 100 && (
                 <div key={index} className="absolute z-10">

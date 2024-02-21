@@ -53,9 +53,6 @@ class Api::V1::ApiController < ApplicationController
       total_experiences = total_experiences_by_area(area)
     end
   
-    pp park, area
-    pp completed_experiences
-    pp total_experiences
     (completed_experiences / total_experiences.to_f * 100).floor
   end
   

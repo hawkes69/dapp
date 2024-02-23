@@ -164,11 +164,11 @@ const dappApi = createApi({
           };
         },
       }),
-      fetchCompletedPercentage: builder.query({
+      fetchParkCompletion: builder.query({
         providesTags: ["CompletedPercentage"],
         query: (query) => {
           return {
-            url: `/completed?${query}`,
+            url: `/park_completion?park=${query}`,
             method: "GET",
           };
         },
@@ -177,6 +177,14 @@ const dappApi = createApi({
         query: () => {
           return {
             url: "date_generator",
+            method: "GET"
+          }
+        }
+      }),
+      fetchCompletedAreas: builder.query({
+        query: (park) => {
+          return {
+            url: `completed_areas?park=${park}`,
             method: "GET"
           }
         }
@@ -201,8 +209,9 @@ export const {
   useRemoveShowMutation,
   useFetchShowQuery,
   useUpdateShowMutation,
-  useFetchCompletedPercentageQuery,
+  useFetchParkCompletionQuery,
   useFetchDateGeneratorQuery,
+  useFetchCompletedAreasQuery,
 } = dappApi;
 
 export { dappApi };

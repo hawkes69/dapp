@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import IMAGES from "../images/Images";
 
-import { useFetchCompletedPercentageQuery } from "../store/apis/dappApi";
+import { useFetchCompletedAreasQuery, useFetchParkCompletionQuery } from "../store/apis/dappApi";
 
 function toCamelCase(text) {
   const textWithoutPunctuation = text.replace(/[^\w\s]/g, ''); // Needed for main street but good to have
@@ -12,24 +12,22 @@ function toCamelCase(text) {
 }
 
 function Map({ park }) {
-  const { data, isLoading } = useFetchCompletedPercentageQuery(`park=${park}`);
+  const { data: parkCompletion, isLoading: parkCompletionLoading } = useFetchParkCompletionQuery(park);
+  const { data: areas, isLoading: areasLoading } = useFetchCompletedAreasQuery(park);
 
-  return isLoading ? (
+  return parkCompletionLoading || areasLoading ? (
     <div className="flex items-center justify-center h-screen">Loading...</div>
   ) : (
     <div className="flex flex-col items-center" style={{ marginTop: "-1px"}}>
       <h1 className="text-3xl font-bold z-30 absolute pt-4 text-white drop-shadow-[0_10px_10px_rgba(0,0,0)]">{park}</h1>
       <img className="z-20" src={IMAGES[`${toCamelCase(park)}Lines`]} />
-      {data.park_completion != 100 ? (
+      {parkCompletion.park_completion != 100 ? (
         <>
-          {data.area_percentages.map(([area, percentage], index) => {
-            console.log(area, percentage)
+          {areas.map((area, index) => {
             return (
-              percentage == 100 && (
-                <div key={index} className="absolute z-10">
-                  <img src={IMAGES[toCamelCase(area)]} />
-                </div>
-              )
+              <div key={index} className="absolute z-10">
+                <img src={IMAGES[toCamelCase(area)]} />
+              </div>
             )
           })}
           <img className="z-0 absolute" src={IMAGES.mapBackground} />

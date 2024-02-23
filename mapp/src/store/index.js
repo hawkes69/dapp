@@ -29,6 +29,7 @@ export {
   useUpdateShowMutation,
   useRemoveShowMutation,
   useFetchShowQuery,
-  useFetchCompletedPercentageQuery,
+  useFetchParkCompletionQuery,
   useFetchDateGeneratorQuery,
+  useFetchCompletedAreasQuery,
 } from "./apis/dappApi";

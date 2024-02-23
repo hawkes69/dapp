@@ -8,6 +8,18 @@ class Api::V1::ApiController < ApplicationController
     "Animal Kingdom" => ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
   }
 
+  def completed_areas
+    park = params[:park]
+
+    areas = []
+
+    PARK_AREAS[park].each do |area|
+      areas << area if completion_percentage(nil, area) == 100
+    end
+
+    render json: areas
+  end
+
   def date_generator
     park = available_parks.sample
 
@@ -19,18 +31,14 @@ class Api::V1::ApiController < ApplicationController
     }
   end
 
-  def completed
+  def park_completion
     park = params[:park]
-
-    area_percentages = []
-
-    PARK_AREAS[park].each do |area|
-      area_percentages << [area, completion_percentage(nil, area)]
-    end
   
     render json: {
       park_completion: completion_percentage(park, nil),
-      area_percentages: area_percentages
+      attraction_completion: experience_completed_percentage(Attraction, park),
+      show_completion: experience_completed_percentage(Show, park),
+      restaurant_completion: experience_completed_percentage(Restaurant, park),
     }
   end
   
@@ -42,6 +50,10 @@ class Api::V1::ApiController < ApplicationController
         experience_type_completed?(Show, park) ||
         experience_type_completed?(Restaurant, park)
     end
+  end
+
+  def experience_completed_percentage(experience_type, park)
+    experience_type.where(completed: true, park: park).count / experience_type.where(park: park).count.to_f * 100
   end
   
   def completion_percentage(park, area)

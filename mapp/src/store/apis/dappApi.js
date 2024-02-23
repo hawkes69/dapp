@@ -42,7 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
-        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage"],
+        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "CompletedAreas"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -94,7 +94,7 @@ const dappApi = createApi({
         },
       }),
       updateRestaurant: builder.mutation({
-        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage"],
+        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "CompletedAreas"],
         query: (restaurant) => {
           return {
             url: `/restaurants/${restaurant.id}`,
@@ -146,7 +146,7 @@ const dappApi = createApi({
         },
       }),
       updateShow: builder.mutation({
-        invalidatesTags: ["Shows", "Show", "CompletedPercentage"],
+        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "CompletedAreas"],
         query: (show) => {
           return {
             url: `/shows/${show.id}`,
@@ -182,6 +182,7 @@ const dappApi = createApi({
         }
       }),
       fetchCompletedAreas: builder.query({
+        providesTags: ["CompletedAreas"],
         query: (park) => {
           return {
             url: `completed_areas?park=${park}`,

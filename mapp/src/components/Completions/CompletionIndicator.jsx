@@ -45,8 +45,6 @@ function CompletionIndicator({ park }) {
         (data.attraction_completion == 100 && data.show_completion == 0) ||
         (data.attraction_completion == 100 && data.show_completion == 100 && data.restaurant_completion == 0) ||
         data.restaurant_completion == 100)) {
-      console.log(park);
-      console.log(data)
       setImagesLoaded(true);
       numImages = 0;
     } else if (numImages == 2) {

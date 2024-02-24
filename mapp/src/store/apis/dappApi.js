@@ -42,7 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
-        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "CompletedAreas"],
+        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -94,7 +94,7 @@ const dappApi = createApi({
         },
       }),
       updateRestaurant: builder.mutation({
-        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "CompletedAreas"],
+        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
         query: (restaurant) => {
           return {
             url: `/restaurants/${restaurant.id}`,
@@ -146,7 +146,7 @@ const dappApi = createApi({
         },
       }),
       updateShow: builder.mutation({
-        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "CompletedAreas"],
+        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
         query: (show) => {
           return {
             url: `/shows/${show.id}`,
@@ -189,6 +189,15 @@ const dappApi = createApi({
             method: "GET"
           }
         }
+      }),
+      fetchExperienceCompletion: builder.query({
+        providesTags: ["ExperienceCompletion"],
+        query: (query) => {
+          return {
+            url: `experience_completion?experience=${query}`,
+            method: "GET"
+          }
+        }
       })
     };
   },
@@ -213,6 +222,7 @@ export const {
   useFetchParkCompletionQuery,
   useFetchDateGeneratorQuery,
   useFetchCompletedAreasQuery,
+  useFetchExperienceCompletionQuery,
 } = dappApi;
 
 export { dappApi };

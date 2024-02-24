@@ -32,4 +32,5 @@ export {
   useFetchParkCompletionQuery,
   useFetchDateGeneratorQuery,
   useFetchCompletedAreasQuery,
+  useFetchExperienceCompletionQuery,
 } from "./apis/dappApi";

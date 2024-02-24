@@ -4,6 +4,7 @@ Rails.application.routes.draw do
       get '/park_completion', to: 'api#park_completion'
       get '/date_generator', to: 'api#date_generator'
       get '/completed_areas', to: 'api#completed_areas'
+      get '/experience_completion', to: 'api#experience_completion'
 
       resources :attractions
       resources :restaurants

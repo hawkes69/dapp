@@ -11,14 +11,22 @@ import { Edit } from "@mui/icons-material";
 
 import PropTypes from 'prop-types';
 
-import { useUpdateAttractionMutation } from "../store/apis/dappApi";
-import { useUpdateRestaurantMutation } from "../store/apis/dappApi";
-import { useUpdateShowMutation } from "../store/apis/dappApi";
+import { useUpdateAttractionMutation, useUpdateRestaurantMutation, useUpdateShowMutation } from "../store/apis/dappApi";
 
 function ListRow({ row, type }) {
   const [updateAttraction] = useUpdateAttractionMutation();
   const [updateRestaurant] = useUpdateRestaurantMutation();
   const [updateShow] = useUpdateShowMutation();
+
+  const handleCheck = (event) => {
+    if (type === "Attractions") {
+      updateAttraction({ ...row, completed: event.target.checked });
+    } else if (type === "Restaurants") {
+      updateRestaurant({ ...row, completed: event.target.checked });
+    } else if (type === "Shows") {
+      updateShow({ ...row, completed: event.target.checked });
+    }
+  }
 
   return (
     <TableRow
@@ -30,15 +38,7 @@ function ListRow({ row, type }) {
         control={
           <Checkbox
             checked={row.completed}
-            onChange={(event) => {
-              if (type === "Attractions") {
-                updateAttraction({ ...row, completed: event.target.checked });
-              } else if (type === "Restaurants") {
-                updateRestaurant({ ...row, completed: event.target.checked });
-              } else if (type === "Shows") {
-                updateShow({ ...row, completed: event.target.checked });
-              }
-            }}
+            onChange={handleCheck}
           />
         }
       />

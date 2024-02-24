@@ -20,6 +20,28 @@ class Api::V1::ApiController < ApplicationController
     render json: areas
   end
 
+  def experience_completion
+    experience = params[:experience]
+
+    case experience
+    when "Attractions"
+      experience = Attraction
+    when "Shows"
+      experience = Show
+    when "Restaurants"
+      experience = Restaurant
+    end
+
+    parks = PARK_AREAS.keys
+    parks_experience_completion = {}
+
+    parks.each do |park|
+      parks_experience_completion[park] = experience_completed_percentage(experience, park)
+    end
+
+    render json: parks_experience_completion
+  end
+
   def date_generator
     park = available_parks.sample
 
@@ -53,6 +75,8 @@ class Api::V1::ApiController < ApplicationController
   end
 
   def experience_completed_percentage(experience_type, park)
+    pp experience_type.where(completed: true, park: park).count
+    pp experience_type.where(park: park).count.to_f * 100
     experience_type.where(completed: true, park: park).count / experience_type.where(park: park).count.to_f * 100
   end
   

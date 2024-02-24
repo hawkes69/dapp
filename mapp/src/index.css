@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.logo-animation {
+  max-height: 0%;
+  animation-name: logoAnimation;
+  animation-duration: 4s;
+}
+
 .skeleton-box {
   display: inline-block;
   position: relative;
@@ -34,5 +40,14 @@ background-image: linear-gradient(
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes logoAnimation {
+  0% {
+    max-height: 100%;
+  }
+  100% {
+    max-height: 0%;
   }
 }

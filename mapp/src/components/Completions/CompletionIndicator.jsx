@@ -9,14 +9,13 @@ import IMAGES from "~/images/Images";
 import { useFetchParkCompletionQuery } from "../../store/apis/dappApi";
 
 function humanReadable(camelCase) {
-  console.log(camelCase)
   return camelCase.replace(/([A-Z])/g, ' $1')
               .replace(/^./, function(str){ return str.toUpperCase(); });
 }
 
 function CompletionIndicator({ park }) {
   const { data, isLoading } = useFetchParkCompletionQuery(humanReadable(park));
-
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -25,6 +24,8 @@ function CompletionIndicator({ park }) {
   const grayscale = park + "Grayscale";
   const bronze = park + "Bronze";
   const gold = park + "Gold";
+
+  let numImages = 0;
 
   const style = {
     position: 'absolute',
@@ -38,32 +39,55 @@ function CompletionIndicator({ park }) {
     width: "max-content",
   };
 
+  const handleLoad = () => {
+    numImages++;
+    if (numImages == 1 && (data.attraction_completion == 0 ||
+        (data.attraction_completion == 100 && data.show_completion == 0) ||
+        (data.attraction_completion == 100 && data.show_completion == 100 && data.restaurant_completion == 0) ||
+        data.restaurant_completion == 100)) {
+      console.log(park);
+      console.log(data)
+      setImagesLoaded(true);
+      numImages = 0;
+    } else if (numImages == 2) {
+      setImagesLoaded(true);
+      numImages = 0;
+    }
+  }
+
   return (
     isLoading ? (
-      <div>Loading...</div>
+      <div className="flex items-center justify-center w-32 h-32 skeleton-box z-40">
+        <div className="flex justify-center items-center h-full text-white z-40">Loading...</div>
+      </div>
     ) : (
       <div>
         <div className="w-32 h-32 relative" onClick={handleOpen}>
+          {!imagesLoaded && (
+            <div className="flex items-center justify-center h-full w-full skeleton-box z-40" style={{ position: "absolute" }}>
+              <div className="flex justify-center items-center h-full text-white z-40">Loading...</div>
+            </div>
+          )}
           {data.attraction_completion != 100 && 
             <div className="overflow-hidden absolute z-30" style={{ maxHeight: `${100 - data.attraction_completion}%` }}>
-              <img src={IMAGES[grayscale]} />
+              <img src={IMAGES[grayscale]} onLoad={handleLoad} />
             </div>
           }
 
           {(data.attraction_completion != 0) &&
             <div className="overflow-hidden z-20 absolute" style={{ maxHeight: `${data.attraction_completion != 100 ? 100 : 100 - data.show_completion}%` }}>
-              <img src={IMAGES[color]} />
+              <img src={IMAGES[color]} onLoad={handleLoad} />
             </div>
           }
 
           {(data.show_completion != 0 && data.restaurant_completion_completion != 100 && data.attraction_completion == 100) &&
             <div className="overflow-hidden z-10 absolute" style={{ maxHeight: `${data.show_completion != 100 ? 100 : 100 - data.restaurant_completion}%` }}>
-              <img src={IMAGES[bronze]} />
+              <img src={IMAGES[bronze]} onLoad={handleLoad} />
             </div>
           }
 
           {(data.attraction_completion == 100 && data.show_completion == 100 && data.restaurant_completion != 0) && 
-            <img className="absolute z-0" src={IMAGES[gold]} />
+            <img className="absolute z-0" src={IMAGES[gold]} onLoad={handleLoad} />
           }
         </div>
         <Modal open={open} onClose={handleClose}>

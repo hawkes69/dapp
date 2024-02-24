@@ -13,9 +13,10 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- Loading spinner
-- button colors
 - Completion effects
+
+- Loading spinner
+- button colors // meh, not that important and mui buttons make this omega hard for some reason. not really worth for the two buttons
 - Pop out animation
 - Map completion animation
 - info button

@@ -8,7 +8,7 @@ import useSound from 'use-sound';
 import IMAGES from "~/images/Images";
 import confetti from "~/sounds/confetti.mp3";
 
-function LogoEffect({ imageLinks }) {
+function LogoEffect({ backgroundImage, overlayImage }) {
   const [kaboom, setKaboom] = useState(false);
   const [play] = useSound(confetti);
 
@@ -24,11 +24,11 @@ function LogoEffect({ imageLinks }) {
     <div className="fixed flex h-full w-full justify-center items-center" style={{marginTop: "-76px", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
       <div className="w-72 h-72 relative">
         <div className="overflow-hidden absolute z-30 logo-animation">
-          <img src={IMAGES[imageLinks[0]]} />
+          <img src={IMAGES[overlayImage]} />
         </div>
 
         <div className="overflow-hidden z-20 absolute">
-          <img src={IMAGES[imageLinks[1]]} />
+          <img src={IMAGES[backgroundImage]} />
         </div>
         {kaboom &&
           <>
@@ -44,5 +44,6 @@ function LogoEffect({ imageLinks }) {
 export default LogoEffect;
 
 LogoEffect.propTypes = {
-  imageLinks: PropTypes.array.isRequired,
+  backgroundImage: PropTypes.string.isRequired,
+  overlayImage: PropTypes.string.isRequired,
 };

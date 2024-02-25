@@ -13,11 +13,8 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- Completion effects
-
-- button colors // meh, not that important and mui buttons make this omega hard for some reason. not really worth for the two buttons
-- Pop out animation
+- don't run first completion
+- fix date generator so that it has a finished state
 - Map completion animation
 - info button
 - HOST!!!!
-- consolidate constants files in front and back end to just back end

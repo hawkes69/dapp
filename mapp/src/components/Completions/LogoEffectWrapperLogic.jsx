@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import PropTypes from "prop-types";
 
@@ -17,20 +17,14 @@ function LogoEffectLogic({ experience, backgroundImageSuffix, overlayImageSuffix
   const {data, isLoading} = useFetchExperienceCompletionQuery(experience);
   const [completedParks, setCompletedParks] = useState([]);
   const [newlyCompletedPark, setNewlyCompletedPark] = useState("");
-
-  console.log("master list", completedParks)
+  const initialLoad = useRef(true);
 
   useEffect(() => {
-
-    if (!isLoading) {
+    if (!isLoading && !initialLoad.current) {
       const newCompletedParks = Object.keys(data).filter(park => data[park] === 100);
-      console.log("new parks with 100", newCompletedParks)
       const addedPark = newCompletedParks.filter(park => !completedParks.includes(park));
-
       const removedParks = completedParks.filter(park => !newCompletedParks.includes(park));
-
       setCompletedParks(prevParks => prevParks.filter(park => !removedParks.includes(park)));
-      console.log("new park added to list", addedPark)
       setCompletedParks(prevParks => [...prevParks, ...addedPark]);
 
       if (addedPark.length > 0) {
@@ -42,6 +36,10 @@ function LogoEffectLogic({ experience, backgroundImageSuffix, overlayImageSuffix
   
         return () => clearTimeout(timeout);
       }
+    }
+    else if(data !== undefined) {
+      initialLoad.current = false;
+      setCompletedParks(Object.keys(data).filter(park => data[park] === 100));
     }
   }, [data]);
 

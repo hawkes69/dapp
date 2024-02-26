@@ -14,7 +14,6 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 ## TODO
 
 - map will go here remove probs
-- don't run first completion
 - fix date generator so that it has a finished state
 - Map completion animation
 - info button

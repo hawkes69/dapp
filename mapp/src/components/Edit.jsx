@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import { TextField, FormControlLabel, Checkbox, FormGroup, Button } from "@mui/material";
+import { TextField, FormGroup, Button } from "@mui/material";
 
 import { 
   useAddAttractionMutation,
@@ -30,7 +30,6 @@ function Edit({ type }) {
   const [name, setName] = useState("");
   const [park, setPark] = useState(parks[0]);
   const [area, setArea] = useState(PARK_AREAS[park][0]);
-  const [completed, setCompleted] = useState(false);
 
   let mutationVariables;
   
@@ -99,7 +98,6 @@ function Edit({ type }) {
       name,
       park,
       area,
-      completed,
     };
 
     updateMutation(updateData);
@@ -111,7 +109,6 @@ function Edit({ type }) {
       name,
       park,
       area,
-      completed
     };
 
     addMutation(attractionData);
@@ -121,7 +118,6 @@ function Edit({ type }) {
   useEffect(() => {
     if (!isLoading && id != null) {
       setPark(data.park);
-      setCompleted(data.completed);
       setName(data.name);
       setArea(data.area);
     }
@@ -149,17 +145,6 @@ function Edit({ type }) {
           value={area}
           label="Area"
           setValue={setArea}
-        />
-        <FormControlLabel
-          control={
-            <Checkbox
-              checked={completed}
-              onChange={(event) => {
-                setCompleted(event.target.checked);
-              }}
-            />
-          }
-          label="Completed"
         />
         <div className="outline rounded-lg h-80 flex justify-center align-center">
           map will go here

@@ -13,6 +13,11 @@ function Info() {
         <br />
         <br />
         Feel free to click around this demo version. There are some fun animations at both area and item completions.
+        <br />
+        <br /> 
+        <strong>Note:</strong> You can click on the park icons on the home page to see the progress for each park, as well as get to area 
+        completion maps. I didn't feel like putting a link to this page anywhere in the app so if you need to get back to
+        it for some reason go to /info.
       </p>
     </div>
   )

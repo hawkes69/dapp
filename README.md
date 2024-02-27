@@ -14,6 +14,7 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 ## TODO
 
 - Map logic simplify with call backs, duplicate that work for the experience animation too
+- make screen unclickable on animations
 - Map completion animation
 - map will go here remove probs
 - HOST!!!!

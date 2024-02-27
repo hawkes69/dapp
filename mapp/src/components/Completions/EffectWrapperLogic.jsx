@@ -2,6 +2,8 @@ import { useState, useEffect, useRef, cloneElement } from "react";
 
 import PropTypes from "prop-types";
 
+import { toCamelCase } from "~/constants.js";
+
 import { useFetchAnimationCheckListQuery } from "../../store";
 
 function EffectWrapperLogic({ query, animation }) {
@@ -23,7 +25,7 @@ function EffectWrapperLogic({ query, animation }) {
         setShowCompletionAnimation(true);
         const timeout = setTimeout(() => {
           setShowCompletionAnimation(false);
-        }, 6000);
+        }, 5000);
   
         return () => clearTimeout(timeout);
       }
@@ -36,7 +38,7 @@ function EffectWrapperLogic({ query, animation }) {
 
   return (
     <div>
-      { showCompletionAnimation && cloneElement(animation, { file: newlyCompleted}) }
+      { showCompletionAnimation && cloneElement(animation, { file: toCamelCase(newlyCompleted)}) }
     </div>
   )
 }

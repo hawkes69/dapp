@@ -8,3 +8,15 @@ export const PARK_AREAS = {
   "Hollywood Studios": ["Hollywood Boulevard", "Muppet Courtyard", "Echo Lake", "Toy Story Land", "Galaxy's Edge", "Animation Courtyard", "Sunset Boulevard"],
   "Animal Kingdom": ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
 }
+
+export function toCamelCase(text) {
+  const textWithoutPunctuation = text.replace(/[^\w\s]/g, ''); // Needed for main street but good to have
+  return textWithoutPunctuation.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
+    return index === 0 ? word.toLowerCase() : word.toUpperCase();
+  }).replace(/\s+/g, '');
+}
+
+export function humanReadable(camelCase) {
+  return camelCase.replace(/([A-Z])/g, ' $1')
+              .replace(/^./, function(str){ return str.toUpperCase(); });
+}

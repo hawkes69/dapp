@@ -1,17 +1,11 @@
 import { useState } from "react";
 
 import PropTypes from 'prop-types';
+import { toCamelCase } from "~/constants.js";
 
 import IMAGES from "../images/Images";
 
 import { useFetchCompletedAreasQuery, useFetchParkCompletionQuery } from "../store/apis/dappApi";
-
-function toCamelCase(text) {
-  const textWithoutPunctuation = text.replace(/[^\w\s]/g, ''); // Needed for main street but good to have
-  return textWithoutPunctuation.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) {
-    return index === 0 ? word.toLowerCase() : word.toUpperCase();
-  }).replace(/\s+/g, '');
-}
 
 function Map({ park }) {
   const { data: parkCompletion, isLoading: parkCompletionLoading } = useFetchParkCompletionQuery(park);

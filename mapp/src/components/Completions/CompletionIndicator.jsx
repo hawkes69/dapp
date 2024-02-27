@@ -4,14 +4,10 @@ import PropTypes from "prop-types";
 
 import { Modal, Box, Button } from '@mui/material';
 
+import { humanReadable } from "~/constants.js";
 import IMAGES from "~/images/Images";
 
 import { useFetchParkCompletionQuery } from "../../store/apis/dappApi";
-
-function humanReadable(camelCase) {
-  return camelCase.replace(/([A-Z])/g, ' $1')
-              .replace(/^./, function(str){ return str.toUpperCase(); });
-}
 
 function CompletionIndicator({ park }) {
   const { data, isLoading } = useFetchParkCompletionQuery(humanReadable(park));

@@ -21,7 +21,7 @@ function LogoEffect({ backgroundImageSuffix, overlayImageSuffix, file }) {
   }, []);
 
   return (
-    <div className="fixed flex h-full w-full justify-center items-center" style={{marginTop: "-76px", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
+    <div className="fixed flex h-full w-full justify-center items-center z-10" style={{marginTop: "-76px", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
       <div className="w-72 h-72 relative">
         <div className="overflow-hidden absolute z-30 logo-animation">
           <img src={IMAGES[`${file}${overlayImageSuffix}`]} />

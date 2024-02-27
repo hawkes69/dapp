@@ -13,9 +13,8 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- map will go here remove probs
+
 - edge case where map and experience are both complete
-- make screen unclickable on animations
 
 - clean up npm packages from ruby directorys
 

@@ -23,7 +23,7 @@ function MapEffect({ file }) {
         <div className="flex justify-center items-center h-full text-white z-40">Loading...</div>
       </div>
     ) : (
-      <div className="fixed flex h-full w-full justify-center items-center" style={{marginTop: "-72px", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
+      <div className="fixed flex h-full w-full justify-center items-center z-10" style={{marginTop: "-72px", backgroundColor: "rgba(0, 0, 0, 0.3)"}}>
         <div className="w-72 relative" style={{height: "28rem"}}>
           <img className="absolute z-20 rounded-2xl" src={IMAGES[`${toCamelCase(park)}Lines`]} />
           <>

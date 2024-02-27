@@ -33,4 +33,5 @@ export {
   useFetchDateGeneratorQuery,
   useFetchCompletedAreasQuery,
   useFetchExperienceCompletionQuery,
+  useFetchAnimationCheckListQuery,
 } from "./apis/dappApi";

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import List from "../List";
-import LogoEffectLogic from "../completions/LogoEffectWrapperLogic";
-import MapEffectWrapperLogic from "../completions/MapEffectWrapperLogic";
+import EffectWrapperLogic from "../completions/EffectWrapperLogic";
+import LogoEffect from "../completions/LogoEffect";
+import MapEffect from "../completions/MapEffect";
 
 import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
 
@@ -14,9 +15,9 @@ function Attractions() {
 
   return (
     <div>
-      <LogoEffectLogic experience="Attractions" backgroundImageSuffix="Color" overlayImageSuffix="Grayscale" />
+      <EffectWrapperLogic query="experience=Attractions" animation={<LogoEffect backgroundImageSuffix="Color" overlayImageSuffix="Grayscale" />} />
+      <EffectWrapperLogic query={`park=${updatedPark}`} animation={<MapEffect />} />
       <List type="Attractions" data={data} isLoading={isLoading} handleRowUpdate={handleRowUpdate} />
-      <MapEffectWrapperLogic park={updatedPark} />
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import { useState } from "react";
 import List from "../List";
-import LogoEffectLogic from "../completions/LogoEffectWrapperLogic";
-import MapEffectWrapperLogic from "../completions/MapEffectWrapperLogic";
+import EffectWrapperLogic from "../completions/EffectWrapperLogic";
+import LogoEffect from "../completions/LogoEffect";
+import MapEffect from "../completions/MapEffect";
 
 import { useFetchRestaurantsQuery } from "../../store/apis/dappApi";
 
@@ -14,9 +15,9 @@ function Restaurants() {
 
   return (
     <div>
-      <LogoEffectLogic experience="Restaurants" backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />
+      <EffectWrapperLogic query="experience=Restaurants" animation={<LogoEffect backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />} />
+      <EffectWrapperLogic query={`park=${updatedPark}`} animation={<MapEffect />} />
       <List type="Restaurants" data={data} isLoading={isLoading} handleRowUpdate={handleRowUpdate} />
-      <MapEffectWrapperLogic park={updatedPark} />
     </div>
   );
 }

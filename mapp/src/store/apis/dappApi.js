@@ -42,7 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
-        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
+        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "animCheckList"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -94,7 +94,7 @@ const dappApi = createApi({
         },
       }),
       updateRestaurant: builder.mutation({
-        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
+        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "animCheckList"],
         query: (restaurant) => {
           return {
             url: `/restaurants/${restaurant.id}`,
@@ -146,7 +146,7 @@ const dappApi = createApi({
         },
       }),
       updateShow: builder.mutation({
-        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "CompletedAreas", "ExperienceCompletion"],
+        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "animCheckList"],
         query: (show) => {
           return {
             url: `/shows/${show.id}`,
@@ -198,7 +198,16 @@ const dappApi = createApi({
             method: "GET"
           }
         }
-      })
+      }),
+      fetchAnimationCheckList: builder.query({
+        providesTags: ["animCheckList"],
+        query: (query) => {
+          return {
+            url: `animation_check_list?${query}`,
+            method: "GET"
+          }
+        }
+      }),
     };
   },
 });
@@ -223,6 +232,7 @@ export const {
   useFetchDateGeneratorQuery,
   useFetchCompletedAreasQuery,
   useFetchExperienceCompletionQuery,
+  useFetchAnimationCheckListQuery,
 } = dappApi;
 
 export { dappApi };

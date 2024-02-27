@@ -8,6 +8,19 @@ class Api::V1::ApiController < ApplicationController
     "Animal Kingdom" => ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
   }
 
+  def animation_check_list
+    park = params[:park]
+    experience = params[:experience]
+
+    if park.present?
+      completed_areas
+    elsif experience.present?
+      experience_completion
+    else
+      render json: "Missing params. Please provide a park or experience."
+    end
+  end
+
   def completed_areas
     park = params[:park]
 
@@ -39,7 +52,7 @@ class Api::V1::ApiController < ApplicationController
       parks_experience_completion[park] = experience_completed_percentage(experience, park)
     end
 
-    render json: parks_experience_completion
+    render json: parks_experience_completion.select { |key, value| value == 100 }.keys
   end
 
   def date_generator
@@ -75,8 +88,6 @@ class Api::V1::ApiController < ApplicationController
   end
 
   def experience_completed_percentage(experience_type, park)
-    pp experience_type.where(completed: true, park: park).count
-    pp experience_type.where(park: park).count.to_f * 100
     experience_type.where(completed: true, park: park).count / experience_type.where(park: park).count.to_f * 100
   end
   

@@ -13,8 +13,8 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-- map will go here remove probs
-- fix date generator so that it has a finished state
 - Map completion animation
-- info button
+- map will go here remove probs
+- info page
+- more robust date generator
 - HOST!!!!

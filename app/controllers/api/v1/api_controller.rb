@@ -68,8 +68,8 @@ class Api::V1::ApiController < ApplicationController
 
   def available_parks
     available_parks = PARK_AREAS.keys.reject do |park|
-      experience_type_completed?(Attraction, park) ||
-        experience_type_completed?(Show, park) ||
+      experience_type_completed?(Attraction, park) &&
+        experience_type_completed?(Show, park) &&
         experience_type_completed?(Restaurant, park)
     end
   end
@@ -121,6 +121,10 @@ class Api::V1::ApiController < ApplicationController
   end
 
   def random_experience(experience_type, park)
-    experience_type.where(park: park, completed: false).sample
+    if experience_type.where(park: park, completed: false).empty?
+      { name: "All #{experience_type.to_s.downcase}s are completed in #{park}." }
+    else
+      experience_type.where(park: park, completed: false).sample
+    end
   end
 end

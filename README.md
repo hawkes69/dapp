@@ -15,6 +15,4 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 - Map completion animation
 - map will go here remove probs
-- info page
-- more robust date generator
 - HOST!!!!

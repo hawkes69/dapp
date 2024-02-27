@@ -13,12 +13,13 @@ import PropTypes from 'prop-types';
 
 import { useUpdateAttractionMutation, useUpdateRestaurantMutation, useUpdateShowMutation } from "../store/apis/dappApi";
 
-function ListRow({ row, type }) {
+function ListRow({ row, type, handleRowUpdate }) {
   const [updateAttraction] = useUpdateAttractionMutation();
   const [updateRestaurant] = useUpdateRestaurantMutation();
   const [updateShow] = useUpdateShowMutation();
 
   const handleCheck = (event) => {
+    handleRowUpdate(row.park);
     if (type === "Attractions") {
       updateAttraction({ ...row, completed: event.target.checked });
     } else if (type === "Restaurants") {
@@ -59,5 +60,6 @@ export default ListRow;
 
 ListRow.propTypes = {
   row: PropTypes.object.isRequired,
-  type: PropTypes.string.isRequired
+  type: PropTypes.string.isRequired,
+  handleRowUpdate: PropTypes.func.isRequired,
 };

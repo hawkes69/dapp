@@ -20,7 +20,8 @@ import {
 } from "../store/apis/dappApi";
 
 import Dropdown from "./Dropdown";
-import { PARK_AREAS } from "../constants";
+import IMAGES from "../images/Images";
+import { PARK_AREAS, toCamelCase } from "../constants";
 
 function Edit({ type }) {  
   const { id } = useParams();
@@ -146,9 +147,14 @@ function Edit({ type }) {
           label="Area"
           setValue={setArea}
         />
-        <div className="outline rounded-lg h-80 flex justify-center align-center">
-          map will go here
-        </div>
+        {/* Someday I might come back to this. The problem is this needs to go into a square container and the image is hd portrait. 
+            I could do this programtically or upload all new images. Either way not really useful for such a rarely visited page and not worth 
+            the effort at the moment. 
+        <div className="relative outline rounded-lg h-80 flex justify-center align-center">
+          <img className="absolute z-20" src={IMAGES[`${toCamelCase(park)}Lines`]} />
+          <img className="absolute z-10" src={IMAGES[toCamelCase(area)]} />
+          <img className="absolute z-0" src={IMAGES["mapBackground"]} />
+        </div> */}
         {id != null ? (
           <div className="flex justify-center gap-4">            
             <Button variant="contained" onClick={handleUpdate}>Save</Button>

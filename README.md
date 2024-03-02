@@ -16,6 +16,4 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 - edge case where map and experience are both complete
 
-- clean up npm packages from ruby directorys
-
 - HOST!!!!

@@ -27,7 +27,6 @@ function MapEffect({ file }) {
           <img className="absolute z-50 rounded-2xl" src={IMAGES[`${toCamelCase(park)}Lines`]} />
           <>
             {data.map((area, index) => {
-              console.log("data", data)
               return (
                 <>
                   <div key={index} className="absolute">

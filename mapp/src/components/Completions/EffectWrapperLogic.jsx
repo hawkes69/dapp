@@ -11,14 +11,10 @@ function EffectWrapperLogic({ query, animation }) {
   const [newlyCompleted, setNewlyCompleted] = useState("");
   const initialLoad = useRef(true);
 
-  console.log("completed", completed)
-
   useEffect(() => {
     if (!isLoading && !initialLoad.current) {
       const added = data.filter(item => !completed.includes(item));
-      console.log("added", added)
       const removed = completed.filter(item => !data.includes(item));
-      console.log("removed ", removed)
       setCompleted(prev => prev.filter(item => !removed.includes(item)));
       setCompleted(prev => [...prev, ...added]);
 

@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
 
 import IMAGES from "~/images/Images";
-import { PARK_AREAS, toCamelCase, humanReadable } from "~/constants.js";
-import { useFetchAnimationCheckListQuery } from "~/store";
+import { PARK_AREAS, toCamelCase } from "~/constants.js";
+import { useFetchCompletedAreasQuery } from "~/store";
 import useSound from 'use-sound';
 import map from "~/sounds/map.mp3";
 
@@ -14,7 +14,7 @@ function MapEffect({ file }) {
       park =  key;
     }
   }
-  const { data, isLoading } = useFetchAnimationCheckListQuery();
+  const { data, isLoading } = useFetchCompletedAreasQuery(park);
   
   return (
     isLoading && file != null ? (
@@ -27,13 +27,14 @@ function MapEffect({ file }) {
           <img className="absolute z-50 rounded-2xl" src={IMAGES[`${toCamelCase(park)}Lines`]} />
           <>
             {data.map((area, index) => {
+              console.log("data", data)
               return (
                 <>
                   <div key={index} className="absolute">
                     {area === file ? (
                       <>
                         <div className="w-full h-full relative rounded-2xl map-shimmer z-30" />
-                        {/* <div>{play()}</div> */}
+                        <div>{play()}</div>
                         <img className="rounded-2xl z-10 relative map-animation" src={IMAGES[toCamelCase(file)]} />
                         <div className="rounded-2xl relative map-flash z-10" />
                       </>

@@ -9,25 +9,29 @@ class Api::V1::ApiController < ApplicationController
   }
 
   def animation_check_list
-    park = params[:park]
     experience = params[:experience]
 
-    if park.present?
-      completed_areas
-    elsif experience.present?
+    if experience.present?
       experience_completion
     else
-      render json: "Missing params. Please provide a park or experience."
+      completed_areas
     end
   end
 
   def completed_areas
     park = params[:park]
-
     areas = []
 
-    PARK_AREAS[park].each do |area|
-      areas << area if completion_percentage(nil, area) == 100
+    if park.present?
+      PARK_AREAS[park].each do |area|
+        areas << area if completion_percentage(nil, area) == 100
+      end
+    else
+      PARK_AREAS.each_value do |park_areas|
+        park_areas.each do |area|
+          areas << area if completion_percentage(nil, area) == 100
+        end
+      end
     end
 
     render json: areas

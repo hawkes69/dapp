@@ -89,7 +89,7 @@ const IMAGES = {
   productionCentral: new URL("./maps/universalStudios/production-central.png", import.meta.url).href,
   sanFrancisco: new URL("./maps/universalStudios/san-francisco.png", import.meta.url).href,
   worldExpo: new URL("./maps/universalStudios/world-expo.png", import.meta.url).href,
-  woodyWoodpeckersKidzone: new URL("./maps/universalStudios/woody-woodpecker.png", import.meta.url).href,
+  woodyWoodpeckersKidZone: new URL("./maps/universalStudios/woody-woodpecker.png", import.meta.url).href,
 };
 
 export default IMAGES;

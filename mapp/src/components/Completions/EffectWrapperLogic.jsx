@@ -2,8 +2,6 @@ import { useState, useEffect, useRef, cloneElement } from "react";
 
 import PropTypes from "prop-types";
 
-import { toCamelCase } from "~/constants.js";
-
 import { useFetchAnimationCheckListQuery } from "../../store";
 
 function EffectWrapperLogic({ query, animation }) {
@@ -16,8 +14,8 @@ function EffectWrapperLogic({ query, animation }) {
   useEffect(() => {
     if (!isLoading && !initialLoad.current) {
       const added = data.filter(item => !completed.includes(item));
-      const removedAreas = completed.filter(item => !data.includes(item));
-      setCompleted(prev => prev.filter(item => !removedAreas.includes(item)));
+      const removed = completed.filter(item => !data.includes(item));
+      setCompleted(prev => prev.filter(item => !removed.includes(item)));
       setCompleted(prev => [...prev, ...added]);
 
       if (added.length > 0) {
@@ -38,7 +36,7 @@ function EffectWrapperLogic({ query, animation }) {
 
   return (
     <div>
-      { showCompletionAnimation && cloneElement(animation, { file: toCamelCase(newlyCompleted)}) }
+      { showCompletionAnimation && cloneElement(animation, { file: newlyCompleted}) }
     </div>
   )
 }
@@ -48,4 +46,5 @@ export default EffectWrapperLogic;
 EffectWrapperLogic.propTypes = {
   query: PropTypes.string.isRequired,
   animation: PropTypes.element.isRequired,
+  park: PropTypes.string,
 };

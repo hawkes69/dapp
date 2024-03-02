@@ -16,7 +16,7 @@ import { Add } from "@mui/icons-material";
 
 import ListRow from "./ListRow";
 
-function List({ type, data, isLoading, handleRowUpdate }) {
+function List({ type, data, isLoading }) {
   const [query, setQuery] = useState("");
 
   return isLoading ? (
@@ -51,7 +51,7 @@ function List({ type, data, isLoading, handleRowUpdate }) {
               row.area.toLowerCase().includes(query.toLowerCase()) ||
               row.completed.toString().toLowerCase().includes(query.toLowerCase())
               ).map((row) => (
-              <ListRow key={row.id} row={row} type={type} handleRowUpdate={handleRowUpdate} />
+              <ListRow key={row.id} row={row} type={type} />
             ))}
           </TableBody>
         </Table>
@@ -66,5 +66,4 @@ List.propTypes = {
   type: PropTypes.string,
   data: PropTypes.array,
   isLoading: PropTypes.bool,
-  handleRowUpdate: PropTypes.func,
 };

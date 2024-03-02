@@ -14,11 +14,18 @@ function EffectWrapperLogic({ query, animation }) {
   useEffect(() => {
     if (!isLoading && !initialLoad.current) {
       const added = data.filter(item => !completed.includes(item));
+
       const removed = completed.filter(item => !data.includes(item));
+
       setCompleted(prev => prev.filter(item => !removed.includes(item)));
       setCompleted(prev => [...prev, ...added]);
 
       if (added.length > 0) {
+        console.log("query: ", query) 
+        console.log("completed: ", completed)
+
+        console.log("added: ", added)
+
         setNewlyCompleted(added[0]);
         setShowCompletionAnimation(true);
         const timeout = setTimeout(() => {
@@ -44,7 +51,6 @@ function EffectWrapperLogic({ query, animation }) {
 export default EffectWrapperLogic;
 
 EffectWrapperLogic.propTypes = {
-  query: PropTypes.string.isRequired,
+  query: PropTypes.string,
   animation: PropTypes.element.isRequired,
-  park: PropTypes.string,
 };

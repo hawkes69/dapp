@@ -13,7 +13,7 @@ I have not yet hosted a demo site. I will update this section when I have a demo
 
 ## TODO
 
-
+- change attractions to rides on front end
 - edge case where map and experience are both complete
 
 - HOST!!!!

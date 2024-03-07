@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { useFetchAnimationCheckListQuery } from "../../store";
 
-function EffectWrapperLogic({ query, animation }) {
+function EffectWrapperLogic({ query, animation, animationPlayed, delay }) {
   const [showCompletionAnimation, setShowCompletionAnimation] = useState(false);
   const {data, isLoading} = useFetchAnimationCheckListQuery(query);
   const [completed, setCompleted] = useState([]);
@@ -21,18 +21,30 @@ function EffectWrapperLogic({ query, animation }) {
       setCompleted(prev => [...prev, ...added]);
 
       if (added.length > 0) {
-        console.log("query: ", query) 
-        console.log("completed: ", completed)
-
-        console.log("added: ", added)
-
         setNewlyCompleted(added[0]);
-        setShowCompletionAnimation(true);
-        const timeout = setTimeout(() => {
-          setShowCompletionAnimation(false);
-        }, 5000);
-  
-        return () => clearTimeout(timeout);
+
+        if (!delay) {
+          setShowCompletionAnimation(true);
+
+          const timeout = setTimeout(() => {
+            setShowCompletionAnimation(false);
+          }, 5000);
+    
+          return () => clearTimeout(timeout);
+        } else {
+          const showTrueTimeout = setTimeout(() => {
+            setShowCompletionAnimation(true);
+          }, 6000);
+        
+          const showFalseTimeout = setTimeout(() => {
+            setShowCompletionAnimation(false);
+          }, 11000);
+        
+          return () => {
+            clearTimeout(showTrueTimeout);
+            clearTimeout(showFalseTimeout);
+          };
+        }
       }
     }
     else if(data !== undefined) {
@@ -40,6 +52,9 @@ function EffectWrapperLogic({ query, animation }) {
       setCompleted(data);
     }
   }, [data]);
+  if (showCompletionAnimation && animationPlayed != undefined) {
+    animationPlayed();
+  }
 
   return (
     <div>

@@ -402,7 +402,7 @@ Attraction.create!([
     completed: false
   },
   {
-    name: "Seven Dwargs Mine Train",
+    name: "Seven Dwarves Mine Train",
     park: "Magic Kingdom",
     area: "Fantasyland",
     completed: false

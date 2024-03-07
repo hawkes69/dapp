@@ -68,4 +68,6 @@ export default EffectWrapperLogic;
 EffectWrapperLogic.propTypes = {
   query: PropTypes.string,
   animation: PropTypes.element.isRequired,
+  animationPlayed: PropTypes.func,
+  delay: PropTypes.bool,
 };

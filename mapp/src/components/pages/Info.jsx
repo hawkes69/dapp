@@ -5,7 +5,7 @@ function Info() {
       <br />
       <p className="text-gray-600">
         My wife and I recently moved to Orlando. We wanted to "100%" all of the parks here. Meaning we want to complete
-        all of the attractions, shows, and restaurants at all of the parks. This app was created to help us keep track of
+        all of the rides, shows, and restaurants at all of the parks. This app was created to help us keep track of
         our progress. It is also a showcase of my web development skillset. 
         <br />
         <br />

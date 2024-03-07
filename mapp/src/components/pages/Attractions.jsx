@@ -9,9 +9,7 @@ import { useFetchAttractionsQuery } from "../../store/apis/dappApi";
 
 function Attractions() {
   const { data, isLoading } = useFetchAttractionsQuery();
-
   const [delay, setDelay] = useState(false);
-
 
   const animationPlayed = () => {
     setDelay(true);
@@ -20,7 +18,7 @@ function Attractions() {
   return (
     <div>
       <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} />
-      <EffectWrapperLogic query="experience=Attractions"  delay={delay} animation={<LogoEffect backgroundImageSuffix="Color" overlayImageSuffix="Grayscale" />} />
+      <EffectWrapperLogic query="experience=Attractions" delay={delay} animation={<LogoEffect backgroundImageSuffix="Color" overlayImageSuffix="Grayscale" />} />
       <List type="Attractions" data={data} isLoading={isLoading} />
     </div>
   );

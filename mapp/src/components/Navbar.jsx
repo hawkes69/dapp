@@ -11,7 +11,7 @@ function Navbar() {
       <Link to="/dateNight">
         <FavoriteIcon />
       </Link>
-      <Link to="/attractions">Attractions</Link>
+      <Link to="/attractions">Rides</Link>
       <Link to="/shows">Shows</Link>
       <Link to="/restaurants">Restaurants</Link>
     </div>

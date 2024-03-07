@@ -89,7 +89,7 @@ function CompletionIndicator({ park }) {
             <h2 className="font-bold text-xl text-center">{humanReadable(park)}</h2>
             <hr className="border-black"/>
             <ul>
-              <li>Attractions: {Math.round(data.attraction_completion)}%</li>
+              <li>Rides: {Math.round(data.attraction_completion)}%</li>
               <li>Shows: {Math.round(data.show_completion)}%</li>
               <li>Restaurants: {Math.round(data.restaurant_completion)}%</li>
             </ul>

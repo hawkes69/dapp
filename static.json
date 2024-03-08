@@ -1,3 +1,5 @@
 {
-  "/**": "./mapp/src/main.jsx"
+  "routes" : {
+    "/**": "./mapp/index.html"
+  }
 }

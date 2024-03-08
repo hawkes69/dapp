@@ -6,6 +6,7 @@
   "scripts": {
     "heroku-postbuild": "npm run install-client && npm run build",
     "install-client": "cd mapp && npm install",
-    "build": "cd mapp && npm run build"
+    "build": "cd mapp && npm run build",
+    "start": "cd mapp && npm start"
   }
 }

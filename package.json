@@ -4,6 +4,6 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "build": "cd mapp && npm run build"
+    "build": "cd mapp && npm install && npm run build"
   }
 }

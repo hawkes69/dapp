@@ -2,7 +2,7 @@
   "name": "ur butt",
   "private": true,
   "version": "1.0.0",
-  "type": "module",
+  "main": "mapp/index.html",
   "scripts": {
     "heroku-postbuild": "npm run install-client && npm run build",
     "install-client": "cd mapp && npm install",

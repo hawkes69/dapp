@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import List from "../List";
-import EffectWrapperLogic from "../completions/EffectWrapperLogic";
-import LogoEffect from "../completions/LogoEffect";
-import MapEffect from "../completions/MapEffect";
+import EffectWrapperLogic from "../Completions/EffectWrapperLogic";
+import LogoEffect from "../Completions/LogoEffect";
+import MapEffect from "../Completions/MapEffect";
 
 import { useFetchShowsQuery } from "../../store/apis/dappApi";
 

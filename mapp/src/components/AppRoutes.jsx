@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Completions from "./completions/Completions.jsx";
+import Completions from "./Completions/Completions.jsx";
 import Map from "./Map.jsx";
 import Edit from "./Edit.jsx";
 import Attractions from "./pages/Attractions.jsx";

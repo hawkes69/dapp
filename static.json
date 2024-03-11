@@ -1,5 +1,0 @@
-{
-  "routes" : {
-    "/**": "mapp/index.html"
-  }
-}

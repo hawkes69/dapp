@@ -1,6 +1,12 @@
 function Info() {
   return (
     <div className="flex flex-col p-6">
+      <strong>Hawkes Poulter: Full Stack Developer</strong>
+      hawkespoulter@gmail.com
+      <br />
+      801-404-4932
+      <a href="https://www.linkedin.com/in/hawkes-poulter-9b305419a/" className="underline text-blue-500">LinkedIn Profile</a>
+      <br />
       <h1 className="font-bold text-xl w-full pb-4">About this App</h1>
       <p className="text-gray-600">
         My wife and I recently moved to Orlando. We wanted to "100%" all of the parks here. Meaning we want to complete
@@ -17,13 +23,6 @@ function Info() {
         completion maps. I didn't feel like putting a link to this page anywhere in the app so if you need to get back to
         it for some reason go to /info. There is an edge case bug where the two completion animations will play at the same time. However I don't think it's worth fixing for this demo,
         as it shouldn't occur in actual use often if at all. I may come back to it later when I have more time. 
-        <br />
-        <br /> 
-        <strong>Hawkes Poulter: Full Stack Developer</strong>
-        <br /> 
-        <strong>hawkespoulter@gmail.com</strong>
-        <br /> 
-        <strong>801-404-4932</strong>
       </p>
     </div>
   )

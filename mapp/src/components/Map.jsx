@@ -26,7 +26,7 @@ function Map({ park }) {
   }
 
   return (!parkCompletionLoading && !areasLoading) && (
-    <div className="flex flex-col items-center" style={{ marginTop: "-1px"}}>
+    <div className="flex flex-col items-center" style={{ marginTop: "-2px"}}>
       {!imagesLoaded && (
         <div className="flex items-center justify-center h-screen w-full skeleton-box z-40" style={{ position: "absolute" }}>
           <div className="flex justify-center items-center h-full text-white z-40">Loading...</div>

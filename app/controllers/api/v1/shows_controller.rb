@@ -3,7 +3,7 @@ class Api::V1::ShowsController < ApplicationController
 
   # GET /shows
   def index
-    @shows = Show.all
+    @shows = Show.order(:id)
 
     render json: @shows
   end

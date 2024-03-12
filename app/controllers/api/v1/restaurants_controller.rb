@@ -3,7 +3,7 @@ class Api::V1::RestaurantsController < ApplicationController
 
   # GET /restaurants
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.order(:id)
 
     render json: @restaurants
   end

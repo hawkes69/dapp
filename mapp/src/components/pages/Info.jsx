@@ -13,9 +13,10 @@ function Info() {
         <br />
         Feel free to click around this demo version. There are some fun animations at both area and experience completion.
         <br />
-        <strong>Note:</strong> You can click on the park icons on the home page to see the progress for each park, as well as get to area 
+        <strong>Notes:</strong> You can click on the park icons on the home page to see the progress for each park, as well as get to area 
         completion maps. I didn't feel like putting a link to this page anywhere in the app so if you need to get back to
-        it for some reason go to /info.
+        it for some reason go to /info. There is an edge case bug where the two completion animations will play at the same time. However I don't think it's worth fixing for this demo,
+        as it shouldn't occur in actual use often if at all. I may come back to it later when I have more time. 
         <br />
         <br /> 
         <strong>Hawkes Poulter: Full Stack Developer</strong>

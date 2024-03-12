@@ -13,7 +13,7 @@ function Info() {
         all of the rides, shows, and restaurants at all of the parks. This app was created to help us keep track of
         our progress. It is also a showcase of my web development skillset. 
         <br />
-        The tech stack for this app is: Ruby on Rails, React, Redux, TailwindCSS, and SQLite. This is a mobile first app and does not have a desktop implementation
+        The tech stack for this app is: Ruby on Rails, React, Redux, TailwindCSS, and SQLite. <strong>This is a mobile first app and does not have desktop styling</strong>
         as we will be accessing this app almost exclusively from our phones while in the parks. It's intended to fit the iPhone 15 pro screen size but should
         work on most modern phones.
         <br />

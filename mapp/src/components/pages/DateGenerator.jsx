@@ -23,8 +23,8 @@ function DateGenerator() {
 
   return (
     isLoading ? (
-      <div>Loading...</div> 
-    ) : (
+      <div className="flex items-center justify-center h-screen">Loading...</div>
+      ) : (
       <div className="flex justify-center text-wrap	mt-12">
         <Box sx={style} className="flex flex-col gap-4 min-w-72">
           <h2 className="font-bold text-xl text-center">It's a date!</h2>

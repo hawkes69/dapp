@@ -13,11 +13,11 @@ function Info() {
         all of the rides, shows, and restaurants at all of the parks. This app was created to help us keep track of
         our progress. It is also a showcase of my web development skillset. 
         <br />
-        The tech stack for this app is: Ruby on Rails, React, Redux, TailwindCSS, and SQLite. <strong>This is a mobile first app and does not have desktop styling</strong>
-        as we will be accessing this app almost exclusively from our phones while in the parks. It's intended to fit the iPhone 15 pro screen size but should
+        The tech stack for this app is: Ruby on Rails, React, Redux, TailwindCSS, and SQLite. <strong>This is a mobile first app and does not have desktop styling </strong>
+        as we will be accessing this app almost exclusively from our phones while in the parks. It's intended to fit the iPhone 15 Pro screen size but should
         work on most modern phones.
         <br />
-        Feel free to click around this demo version. There are some fun animations at both area and experience completion.
+        Feel free to click around this demo version. There are some fun animations at both area and experience completions.
         <br />
         <strong>Notes:</strong> You can click on the park icons on the home page to see the progress for each park, as well as get to area 
         completion maps. I didn't feel like putting a link to this page anywhere in the app so if you need to get back to

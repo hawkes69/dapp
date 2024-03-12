@@ -3,7 +3,7 @@ class Api::V1::AttractionsController < ApplicationController
 
   # GET /attractions
   def index
-    @attractions = Attraction.all
+    @attractions = Attraction.order(:id)
 
     render json: @attractions
   end

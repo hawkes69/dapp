@@ -9,8 +9,8 @@ This is a working directory that contains a simple app to track the completion p
 
 ## Demo Site
 
-I have not yet hosted a demo site. I will update this section when I have a demo site available.
+https://hawkespoulter-demo.netlify.app/info
 
-## TODO
-
-- I am aware of an edge case where the animations for area completion and experience completion can play at the same time. It is rare enough that I am not going to bother to fix it. It is a known issue and I am okay with it. For the purposes of this app it's all right. I may come back to it in the future but I'd rather get this up and hosted than spend more time monkeying around with it. 
+demo version remove park animation
+fix loading in mobile
+fix epcot link in mobile

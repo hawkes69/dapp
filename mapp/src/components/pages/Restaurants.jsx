@@ -17,8 +17,8 @@ function Restaurants() {
 
   return (
     <div>
-      <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} />
-      <EffectWrapperLogic query="experience=Restaurants" delay={delay} animation={<LogoEffect backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />} />
+      {/* <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} /> */}
+      <EffectWrapperLogic query="experien1ce=Restaurants" delay={delay} animation={<LogoEffect backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />} />
       <List type="Restaurants" data={data} isLoading={isLoading} />
     </div>
   );

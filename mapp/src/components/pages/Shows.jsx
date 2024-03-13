@@ -17,7 +17,7 @@ function Shows() {
 
   return (
     <div>
-      <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} />
+      {/* <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} /> */}
       <EffectWrapperLogic query="experience=Shows" delay={delay} animation={<LogoEffect backgroundImageSuffix="Bronze" overlayImageSuffix="Color" />} />
       <List type="Shows" data={data} isLoading={isLoading} />
     </div>

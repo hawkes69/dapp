@@ -17,12 +17,13 @@ function Info() {
         as we will be accessing this app almost exclusively from our phones while in the parks. It's intended to fit the iPhone 15 Pro screen size but should
         work on most modern phones.
         <br />
-        Feel free to click around this demo version. There are some fun animations at both area and experience completions.
+        Feel free to click around this demo version. There are is an animation when all of one category is completed in a park.
         <br />
         <strong>Notes:</strong> You can click on the park icons on the home page to see the progress for each park, as well as get to area 
-        completion maps. I didn't feel like putting a link to this page anywhere in the app so if you need to get back to
-        it for some reason go to /info. There is an edge case bug where the two completion animations will play at the same time. However I don't think it's worth fixing for this demo,
-        as it shouldn't occur in actual use often if at all. I may come back to it later when I have more time. 
+        completion maps. The icon will fill with color as attractions are completed, bronze for shows, and gold for restaurants. For an area to be completed on the map 
+        all attractions, shows, and restaurants must be completed.
+        I didn't feel like putting a link to this page anywhere in the app so if you need to get back to
+        it for some reason go to /info.
       </p>
     </div>
   )

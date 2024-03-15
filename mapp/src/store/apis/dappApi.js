@@ -42,7 +42,7 @@ const dappApi = createApi({
         },
       }),
       updateAttraction: builder.mutation({
-        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "animCheckList", "CompletedAreas"],
+        invalidatesTags: ["Attractions", "Attraction", "CompletedPercentage", "animCheckList"],
         query: (attraction) => {
           return {
             url: `/attractions/${attraction.id}`,
@@ -94,7 +94,7 @@ const dappApi = createApi({
         },
       }),
       updateRestaurant: builder.mutation({
-        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "animCheckList", "CompletedAreas"],
+        invalidatesTags: ["Restaurants", "Restaurant", "CompletedPercentage", "animCheckList"],
         query: (restaurant) => {
           return {
             url: `/restaurants/${restaurant.id}`,
@@ -146,7 +146,7 @@ const dappApi = createApi({
         },
       }),
       updateShow: builder.mutation({
-        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "animCheckList", "CompletedAreas"],
+        invalidatesTags: ["Shows", "Show", "CompletedPercentage", "animCheckList"],
         query: (show) => {
           return {
             url: `/shows/${show.id}`,
@@ -177,24 +177,6 @@ const dappApi = createApi({
         query: () => {
           return {
             url: "date_generator",
-            method: "GET"
-          }
-        }
-      }),
-      fetchCompletedAreas: builder.query({
-        providesTags: ["CompletedAreas"],
-        query: (park) => {
-          return {
-            url: `completed_areas?park=${park}`,
-            method: "GET"
-          }
-        }
-      }),
-      fetchExperienceCompletion: builder.query({
-        providesTags: ["ExperienceCompletion"],
-        query: (query) => {
-          return {
-            url: `experience_completion?experience=${query}`,
             method: "GET"
           }
         }
@@ -230,8 +212,6 @@ export const {
   useUpdateShowMutation,
   useFetchParkCompletionQuery,
   useFetchDateGeneratorQuery,
-  useFetchCompletedAreasQuery,
-  useFetchExperienceCompletionQuery,
   useFetchAnimationCheckListQuery,
 } = dappApi;
 

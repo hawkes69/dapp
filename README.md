@@ -11,6 +11,8 @@ This is a working directory that contains a simple app to track the completion p
 
 https://hawkespoulter-demo.netlify.app/info
 
-demo version remove park animation
-fix loading in mobile
-fix epcot link in mobile
+rip out all map stuff from frontend
+rip out all map stuff from backend
+update readme
+update info
+add info link to frontend

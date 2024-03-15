@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 
-import { Modal, Box, Button } from '@mui/material';
+import { Modal, Box } from '@mui/material';
 
 import { humanReadable } from "~/constants.js";
 import IMAGES from "~/images/Images";
@@ -94,9 +93,6 @@ function CompletionIndicator({ park }) {
               <li>Restaurants: {Math.round(data.restaurant_completion)}%</li>
             </ul>
             <hr className="border-black"/>
-            <Button variant="contained">
-              <Link to={`/map/${park}`}>{humanReadable(park)}</Link>
-            </Button>
           </Box>
         </Modal>
       </div>

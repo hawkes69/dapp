@@ -110,6 +110,7 @@ function Edit({ type }) {
       name,
       park,
       area,
+      completed: false,
     };
 
     addMutation(attractionData);

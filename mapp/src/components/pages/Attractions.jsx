@@ -17,7 +17,7 @@ function Attractions() {
 
   return (
     <div>
-      {/* <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} /> */}
+      <EffectWrapperLogic animation={<MapEffect />} animationPlayed={animationPlayed} delay={false} />
       <EffectWrapperLogic query="experience=Attractions" delay={delay} animation={<LogoEffect backgroundImageSuffix="Color" overlayImageSuffix="Grayscale" />} />
       <List type="Attractions" data={data} isLoading={isLoading} />
     </div>

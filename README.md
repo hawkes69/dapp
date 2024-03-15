@@ -19,5 +19,3 @@ work on most modern phones.
 https://hawkespoulter-demo.netlify.app/info
 
 Feel free to click around this demo version. There are is an animation when all of one category is completed in a park. You can click on the park icons on the home page to see the progress for each park. The icon will fill with color as attractions are completed, bronze for shows, and gold for restaurants. 
-
-test again

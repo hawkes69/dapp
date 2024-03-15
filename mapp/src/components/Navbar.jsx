@@ -1,5 +1,6 @@
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { Link } from "react-router-dom";
 
 function Navbar() {
@@ -14,6 +15,9 @@ function Navbar() {
       <Link to="/attractions">Rides</Link>
       <Link to="/shows">Shows</Link>
       <Link to="/restaurants">Restaurants</Link>
+      <Link className="ml-auto" to="/info">
+        <InfoOutlinedIcon />
+      </Link>
     </div>
   );
 }

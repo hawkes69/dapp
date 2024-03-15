@@ -22,16 +22,13 @@ function EffectWrapperLogic({ query, animation }) {
 
       if (added.length > 0) {
       setNewlyCompleted(added[0]);
-        const showTrueTimeout = setTimeout(() => {
-          setShowCompletionAnimation(true);
-        }, 6000);
+        setShowCompletionAnimation(true);
       
         const showFalseTimeout = setTimeout(() => {
           setShowCompletionAnimation(false);
-        }, 11000);
+        }, 5000);
       
         return () => {
-          clearTimeout(showTrueTimeout);
           clearTimeout(showFalseTimeout);
         };
       }

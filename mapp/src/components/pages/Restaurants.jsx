@@ -9,7 +9,7 @@ function Restaurants() {
 
   return (
     <div>
-      <EffectWrapperLogic query="experien1ce=Restaurants" animation={<LogoEffect backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />} />
+      <EffectWrapperLogic query="experience=Restaurants" animation={<LogoEffect backgroundImageSuffix="Gold" overlayImageSuffix="Bronze" />} />
       <List type="Restaurants" data={data} isLoading={isLoading} />
     </div>
   );

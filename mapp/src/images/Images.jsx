@@ -2,6 +2,15 @@ const IMAGES = {
 
   // Logos
 
+  seaWorldColor: new URL("./logos/sea-world-color.png", import.meta.url).href,
+  seaWorldGrayscale: new URL("./logos/sea-world-grayscale.png", import.meta.url).href,
+
+  disneylandColor: new URL("./logos/disneyland-color.png", import.meta.url).href,
+  disneylandGrayscale: new URL("./logos/disneyland-grayscale.png", import.meta.url).href,
+
+  californiaAdventureColor: new URL("./logos/california-adventure-color.png", import.meta.url).href,
+  californiaAdventureGrayscale: new URL("./logos/california-adventure-grayscale.png", import.meta.url).href,
+
   animalKingdomColor: new URL("./logos/animal-kingdom-color.png", import.meta.url).href,
   animalKingdomGrayscale: new URL("./logos/animal-kingdom-grayscale.png", import.meta.url).href,
   animalKingdomBronze: new URL("./logos/animal-kingdom-bronze.png", import.meta.url).href,

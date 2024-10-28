@@ -20,8 +20,7 @@ import {
 } from "../store/apis/dappApi";
 
 import Dropdown from "./Dropdown";
-import IMAGES from "../images/Images";
-import { PARK_AREAS, toCamelCase } from "../constants";
+import { PARK_AREAS } from "../constants";
 
 function Edit({ type }) {  
   const { id } = useParams();

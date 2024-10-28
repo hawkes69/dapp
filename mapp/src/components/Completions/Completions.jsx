@@ -10,6 +10,9 @@ function Completions() {
         <CompletionIndicator park="magicKingdom"/>
         <CompletionIndicator park="islandsOfAdventure"/>
         <CompletionIndicator park="universalStudios"/>
+        <CompletionIndicator park="disneyland"/>
+        <CompletionIndicator park="californiaAdventure"/>
+        <CompletionIndicator park="seaWorld"/>
       </div>
     </div>
   );

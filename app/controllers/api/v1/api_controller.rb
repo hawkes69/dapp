@@ -5,7 +5,10 @@ class Api::V1::ApiController < ApplicationController
     "Epcot" => ["World Celebration", "World Discovery", "World Nature", "World Showcase"],
     "Magic Kingdom" => ["Main Street, U.S.A.", "Adventureland", "Frontierland", "Liberty Square", "Fantasyland", "Tomorrowland"],
     "Hollywood Studios" => ["Hollywood Boulevard", "Muppet Courtyard", "Echo Lake", "Toy Story Land", "Galaxy's Edge", "Animation Courtyard", "Sunset Boulevard"],
-    "Animal Kingdom" => ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
+    "Animal Kingdom" => ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."],
+    "SeaWorld" => [],
+    "Disneyland" => [],
+    "California Adventure" => [],
   }
 
   def animation_check_list
@@ -92,7 +95,11 @@ class Api::V1::ApiController < ApplicationController
   end
 
   def experience_completed_percentage(experience_type, park)
-    experience_type.where(completed: true, park: park).count / experience_type.where(park: park).count.to_f * 100
+    total_count = experience_type.where(park: park).count
+    return 0 if total_count.zero? # Return 0 if there are no experiences for the park
+  
+    completed_count = experience_type.where(completed: true, park: park).count
+    (completed_count / total_count.to_f * 100).round(2)
   end
   
   def completion_percentage(park, area)

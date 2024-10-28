@@ -6,7 +6,10 @@ export const PARK_AREAS = {
   "Epcot": ["World Celebration", "World Discovery", "World Nature", "World Showcase"],
   "Magic Kingdom": ["Main Street, U.S.A.", "Adventureland", "Frontierland", "Liberty Square", "Fantasyland", "Tomorrowland"],
   "Hollywood Studios": ["Hollywood Boulevard", "Muppet Courtyard", "Echo Lake", "Toy Story Land", "Galaxy's Edge", "Animation Courtyard", "Sunset Boulevard"],
-  "Animal Kingdom": ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."]
+  "Animal Kingdom": ["Discovery Island", "Pandora", "Africa", "Asia", "DinoLand U.S.A."],
+  "Sea World": [],
+  "Disneyland": [],
+  "California Adventure": [],
 }
 
 export function toCamelCase(text) {
